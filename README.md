@@ -11,6 +11,7 @@ Then modify the script as needed and run it (`./fresh_install.sh`).
 
 A list of packages that will be installed with the dotfile installer are provided below:
 - IDE (latex, python, fortran, etc.): [vim](https://github.com/vim/vim)
+- Visualization: [Paraview](https://www.paraview.org/download/)
 - Photo editor: [GIMP](https://launchpad.net/~otto-kesselgulasch/+archive/ubuntu/gimp)
 - Vector graphics: `inkscape`
 - Raw photo editor: [rawtherapee](https://launchpad.net/~dhor/+archive/ubuntu/myway)
