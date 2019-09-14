@@ -1,0 +1,117 @@
+source ~/.dotfiles/envs
+
+#====================Functions===================#
+gpush(){
+    [ -z "$1" ] && comm="new refs" || comm="$1"
+    git add . && \
+    git commit -m "$comm" && \
+    git push
+}
+
+ana(){
+shell="$(basename $SHELL)"
+__conda_setup="$(${APP_DIR}/miniconda/bin/conda shell.$shell hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "${APP_DIR}/miniconda/etc/profile.d/conda.sh" ]; then
+        . "${APP_DIR}/miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="${APP_DIR}/miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+}
+
+claw() {
+    [ -z "$1" ] && dir="." || dir="$1"
+
+    [ -d "$dir" ] && \
+    xdg-open "$dir" && \
+    cd "$dir" && \
+    ana && \
+    conda activate claw && \
+    jupyter-lab
+}
+
+jp() {
+    [ -z "$1" ] && dir="." || dir="$1"
+
+    [ -d "$dir" ] && \
+    xdg-open "$dir" && \
+    cd "$dir" && \
+    ana && \
+    conda activate jupyter && \
+    jupyter-lab
+}
+
+
+hydro() {
+    [ -z "$1" ] && dir="." || dir="$1"
+
+    [ -d "$dir" ] && \
+    xdg-open "$dir" && \
+    cd "$dir" && \
+    ana && \
+    conda activate hydro && \
+    jupyter-lab
+}
+
+geo() {
+    ana && \
+    conda activate geo && \
+    export GEOS_INCLUDE_PATH=$CONDA_PREFIX/include && \
+    export GEOS_LIBRARY_PATH=$CONDA_PREFIX/lib && \
+}
+
+fs() {
+    [ -z "$1" ] && dir="." || dir="$1"
+
+    [ -d "$dir" ] && \
+    xdg-open "$dir" && \
+    cd "$dir" && \
+    ana && \
+    conda activate fs
+}
+
+git_latest(){
+    repo=$1
+    asset=$2
+    URL=$( curl -s "https://api.github.com/repos/${repo}/releases/latest" | jq -r ".assets[$asset] | .browser_download_url" ) && \
+    curl -LO "$URL" && \
+    echo "$(basename $URL)"
+}
+
+bup(){
+    cd $BASILISK && \
+    [ ! -f config  ] && ln -s config.gcc config
+    make clean && \
+    make -k && \
+    cd gl && \
+    make clean && \
+    make libglutils.a libfb_glx.a && \
+    cd ../ && \
+    make bview-servers
+}
+
+qc() {
+    ex=$(basename $1 .c)
+    qcc -O2 -Wall -march=native -ffast-math -funroll-loops $1 -o $ex -lm
+}
+
+mkd() { mkdir -p "$@" && cd "$@"; }
+
+#==============================aliases=============================#
+alias vup="make clean && ./configure --with-features=huge --enable-pythoninterp --with-python-config-dir="$(python-config --configdir)" --enable-python3interp --with-python3-config-dir="$(python3-config --configdir)" --disable-gui --prefix=/usr/local && make -j4 VIMRUNTIMEDIR=/usr/local/share/vim/vim81 && sudo make install"
+alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh'
+alias pipup='sudo -H pip3 install -U matplotlib numpy yapf flake8 inkscape-figures wakatime pybind11 thefuck grip fortran-linter pywal pynvim'
+alias swup="cd build && rm -rf * && cmake -DCMAK_BUILD_TYPE=Release .. && cmake --build . --config Release && cd .."
+alias lg='lazygit'
+alias rsync='rsync -avz --info=progress2'
+alias ofdev="source $HOME/OpenFOAM/OpenFOAM-dev/etc/bashrc FOAMY_HEX_MESH=yes"
+alias vim='TERM=xterm-256color vim'
+
+alias opu="opuntia.cacds.uh.edu"
+alias sab="sabine.cacds.uh.edu"
+alias cam='caml-lin.cive.e.uh.edu'
+alias xcd="login.xsede.org"

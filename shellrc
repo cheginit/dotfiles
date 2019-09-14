@@ -1,0 +1,25 @@
+source ~/.dotfiles/aliases
+
+shell=$(basename $SHELL)
+if [[ $shell == 'zsh'  ]]; then
+    prompt_context () { }
+    alias ba="exec bash"
+    [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+fi
+
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
+
+export LESS=-RFX
+export EDITOR=vim
+
+export PATH=$N_PREFIX/bin:$HOME/.local/bin:$BASILISK:/usr/local/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+command -v thefuck >/dev/null 2>&1 && \
+eval $(thefuck --alias fuck)
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+    source /etc/profile.d/vte.sh
+fi
+
+[ -f ~/.fzf.$shell ] && source ~/.fzf.$shell
