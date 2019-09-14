@@ -1,5 +1,5 @@
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git zsh-wakatime)
+plugins=(git zsh-wakatime tmux)
 export ZSH="$HOME/.oh-my-zsh"
 
 # ============================================================================ #
