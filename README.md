@@ -38,6 +38,8 @@ A list of packages that will be installed with the dotfile installer are provide
 
 It's noted that vim is compiled from source with python and clipboard enabled. The rc files are prepared based on [Vim Bootstrap](https://vim-bootstrap.com).
 
+Also, [firefox gnome theme](https://github.com/rafaelmardojai/firefox-gnome-theme) can be used for a more unified and polished look.
+
 After successful execution of the script run the following commands to set `zsh` as the default shell:
 ```bash
 sudo passwd root
