@@ -1,0 +1,5 @@
+! Typeface: Ubuntu
+#define typeface_bar_glyph  Ubuntu Mono 14
+#define typeface_bar        pango:FontAwesome 13
+#define typeface_rofi       Ubuntu Medium 16
+#define typeface_terminal   MesloLGS NF:pixelsize=16:antialias=true:autohint=true
