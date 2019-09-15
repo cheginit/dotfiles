@@ -12,7 +12,7 @@ chmod +x fresh_install.sh
 ```
 Then modify the script as needed and run it (`./fresh_install.sh`).
 
-A list of packages that will be installed with the dotfile installer are provided below:
+A list of some of the packages that will be installed with the dotfile installer are provided below:
 - IDE (latex, python, fortran, etc.): [vim](https://github.com/vim/vim)
 - Visualization: [Paraview](https://www.paraview.org/download/)
 - Photo editor: [GIMP](https://launchpad.net/~otto-kesselgulasch/+archive/ubuntu/gimp)
