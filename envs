@@ -1,16 +1,5 @@
+[[ -f ~/.envs.local ]] && source ~/.envs.local
 export GITHUB_DIR="${HOME}/repos/github"
 export APP_DIR="${HOME}/apps"
-export CFD="${APP_DIR}/cfd"
-export WRF_RUN="${APP_DIR}/wrf_hydro_nwm_public/trunk/NDHMS/Run"
-export CLAW="${GITHUB_DIR}/clawpack"
-export FCLAW="${GITHUB_DIR}/forestclaw"
-export FCLAW_BIN=${FCLAW}/build/local/bin
-export BASILISK="${GITHUB_DIR}/basilisk/src"
-export PETSC_DIR=${GITHUB_DIR}/petsc
-export PETSC_ARCH=arch-linux2-c-opt
 export N_PREFIX="${APP_DIR}/n"
-export CIMEROOT="${GITHUB_DIR}/clm5.0/cime"
-export PROJ_DIR=${HOME}/projects
 export BROWSER="$(which firefox)"
-export FC=gfortran
-export QT_SELECT=qt5
