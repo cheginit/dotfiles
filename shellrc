@@ -1,5 +1,4 @@
 source ~/.dotfiles/aliases
-[[ -f ~/.shellrc.local ]] && source ~/.shellrc.local
 
 shell=$(basename $SHELL)
 if [[ $shell == 'zsh'  ]]; then
@@ -22,3 +21,7 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 
 [ -f ~/.fzf.$shell ] && source ~/.fzf.$shell
+
+if [[ -f ~/.shellrc.local ]]; then
+    source ~/.shellrc.local
+fi

@@ -1,5 +1,8 @@
-[[ -f ~/.envs.local ]] && source ~/.envs.local
 export GITHUB_DIR="${HOME}/repos/github"
 export APP_DIR="${HOME}/apps"
 export N_PREFIX="${APP_DIR}/n"
 export BROWSER="$(which firefox)"
+
+if [[ -f ~/.envs.local ]]; then
+    source ~/.envs.local
+fi
