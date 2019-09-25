@@ -6,7 +6,7 @@ The dotfiles are configured based on a fresh installation of [Regolith-linux](ht
 
 The dotfiles can be configured as follows:
 ```bash
-url='https://gist.githubusercontent.com/cheginit/49dd556bb6ad314268dcd56510742883/raw/2d454d1469d74662ee57a8a1b8f4d2d0b302080c/fresh_install.sh'
+url='https://gist.githubusercontent.com/cheginit/49dd556bb6ad314268dcd56510742883/raw/fresh_install.sh'
 wget -O fresh_install.sh "${url}"
 chmod +x fresh_install.sh
 ```
