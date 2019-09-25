@@ -45,7 +45,7 @@ Also, [firefox gnome theme](https://github.com/rafaelmardojai/firefox-gnome-them
 
 After successful execution of the script run the following commands to set `zsh` as the default shell:
 ```bash
-sudo passwd root
+sudo passwd root && \
 chsh -s $(which zsh)
 ```
 Then reboot for changes to take effect.
