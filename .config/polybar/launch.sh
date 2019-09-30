@@ -15,6 +15,7 @@
     fi
   done
 
+  export NET_INTERFACE=$(ip route get 1.1.1.1 | grep -Po '(?<=dev\s)\w+' | cut -f1 -d ' ')
   for m in $outputs; do
     export MONITOR=$m
     export TRAY_POSITION=none

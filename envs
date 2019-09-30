@@ -2,8 +2,6 @@ export GITHUB_DIR="${HOME}/repos/github"
 export APP_DIR="$HOME/.local/bin"
 export N_PREFIX="${APP_DIR}/n"
 export BROWSER="$(which firefox)"
-export NET_INTERFACE=$(ip route get 1.1.1.1 | grep -Po '(?<=dev\s)\w+' | cut -f1 -d ' ')
-export MONITORS=($(xrandr -q | grep " connected" | cut -d ' ' -f1))
 
 if [[ -f ~/.envs.local ]]; then
     source ~/.envs.local
