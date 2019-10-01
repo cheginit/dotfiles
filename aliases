@@ -34,12 +34,13 @@ git_latest(){
 mkd() { mkdir -p "$@" && cd "$@"; }
 
 #==============================aliases=============================#
-alias vup="make clean && ./configure --with-features=huge --enable-pythoninterp --with-python-config-dir="$(python-config --configdir)" --enable-python3interp --with-python3-config-dir="$(python3-config --configdir)" --disable-gui --prefix=/usr/local && make -j4 VIMRUNTIMEDIR=/usr/local/share/vim/vim81 && sudo make install"
+alias vup="make clean && make -j4 VIMRUNTIMEDIR=/usr/local/share/vim/vim81 && sudo make install"
 alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh'
 alias pipup='sudo -H pip3 install -U matplotlib numpy yapf flake8 inkscape-figures wakatime pybind11 thefuck grip fortran-linter pywal pynvim'
 alias lg='lazygit'
 alias rsync='rsync -avz --info=progress2'
 alias vim='TERM=xterm-256color vim'
+alias calcurse="calcurse -D ~/.config/calcurse"
 
 if [[ -f ~/.aliases.local ]];then
     source ~/.aliases.local
