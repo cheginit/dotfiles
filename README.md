@@ -1,6 +1,6 @@
 # Dotfiles
 
-<img src="https://github.com/cheginit/dotfiles/blob/master/screenshot.png" width="800">
+<img src="https://github.com/cheginit/dotfiles/blob/master/ScreenShot.png" width="800">
 
 The dotfiles are configured based on a fresh installation of [Regolith-linux](https://regolith-linux.org/install.html) V1.2 from its ISO image.
 
