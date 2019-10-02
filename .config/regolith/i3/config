@@ -14,7 +14,7 @@ set $i3xrocks_config /etc/regolith/i3xrocks/config
 set $compton_config /etc/regolith/compton/config
 
 # path to terminal. Override this to specify a custom terminal.
-set $terminal_path /usr/bin/alacritty
+set $terminal_path $HOME/.local/bin/kitty
 
 # #---Dropdown Windows---# #
 # General dropdown window traits. The order can matter.

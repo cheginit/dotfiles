@@ -41,6 +41,7 @@ alias lg='lazygit'
 alias rsync='rsync -avz --info=progress2'
 alias vim='TERM=xterm-256color vim'
 alias calcurse="calcurse -D ~/.config/calcurse"
+alias open="xdg-open"
 
 if [[ -f ~/.aliases.local ]];then
     source ~/.aliases.local
