@@ -14,7 +14,7 @@ set $i3xrocks_config /etc/regolith/i3xrocks/config
 set $compton_config /etc/regolith/compton/config
 
 # path to terminal. Override this to specify a custom terminal.
-set $terminal_path $HOME/.local/bin/kitty
+set $terminal_path /usr/bin/alacritty
 
 # #---Dropdown Windows---# #
 # General dropdown window traits. The order can matter.
@@ -22,11 +22,12 @@ for_window [instance="dropdown_*"] floating enable
 for_window [instance="dropdown_*"] move scratchpad
 for_window [instance="dropdown_*"] sticky enable
 for_window [instance="dropdown_*"] scratchpad show
-for_window [instance="dropdown_tmuxdd"] resize set 625 450
 for_window [instance="dropdown_dropdowncalc"] resize set 800 300
-for_window [instance="dropdown_tmuxdd"] border pixel 3
 for_window [instance="dropdown_dropdowncalc"] border pixel 2
 for_window [instance="dropdown_*"] move position center
+
+bindsym $mod+u			exec --no-startup-id ddspawn
+# bindsym $mod+u exec i3-quickterm shell
 
 # Color values are defined in ~/.Xresources-regolith
 # These are the labels which define each i3 workspace.
@@ -64,7 +65,6 @@ bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
 # kill focused window
 bindsym $mod+q			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 bindsym $mod+Shift+q    [con_id="__focused__" instance="^(?!dropdown_).*$"] exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
-# bindsym $mod+Shift+q kill
 
 set_from_resource $rofiTheme rofi.theme "regolith-theme"
 
