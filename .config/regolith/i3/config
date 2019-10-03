@@ -14,7 +14,8 @@ set $i3xrocks_config /etc/regolith/i3xrocks/config
 set $compton_config /etc/regolith/compton/config
 
 # path to terminal. Override this to specify a custom terminal.
-set $terminal_path /usr/bin/alacritty
+set $term --no-startup-id ~/.local/bin/term
+set $terminal_path /usr/bin/$term
 
 # #---Dropdown Windows---# #
 # General dropdown window traits. The order can matter.
@@ -57,7 +58,7 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # start a terminal
-bindsym $mod+Return exec $terminal_path
+bindsym $mod+Return exec ~/.local/bin/term
 
 # start a web browser
 bindsym $mod+Shift+Return exec /usr/bin/sensible-browser

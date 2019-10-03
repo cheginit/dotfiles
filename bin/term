@@ -1,0 +1,8 @@
+#!/bin/bash
+
+vga="$(lspci -nn |egrep "VGA|Display" | grep -o NVIDIA)"
+if [[ "$vga" == "NVIDIA" ]]; then
+    alacritty
+else
+    st
+fi
