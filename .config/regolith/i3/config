@@ -352,4 +352,4 @@ exec --no-startup-id /usr/bin/unclutter -b
 exec --no-startup-id /usr/bin/xeventbind resolution /usr/bin/wallpaper-refresh
 
 # launch polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id $HOME/.config/polybar/launch.sh
