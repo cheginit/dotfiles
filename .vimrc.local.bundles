@@ -5,10 +5,11 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'wakatime/vim-wakatime'
 Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 Plug 'tpope/vim-surround'
-Plug 'lervag/vimtex'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'rudrab/vimf90'
 Plug 'SirVer/ultisnips'
+Plug 'lervag/vimtex'
+Plug 'KeitaNakamura/tex-conceal.vim'
 Plug 'honza/vim-snippets'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
