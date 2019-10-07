@@ -35,6 +35,10 @@ mkd() { mkdir -p "$@" && cd "$@"; }
 
 # copy the argument to clipboard
 c2c(){ echo $1 | clipcopy }
+
+# soft link a file using readlink
+lns(){ ln -s $(readlink -f $1) $2}
+
 #==============================aliases=============================#
 alias vup="make clean && make -j4 VIMRUNTIMEDIR=/usr/local/share/vim/vim81 && sudo make install"
 alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh'
