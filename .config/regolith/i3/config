@@ -341,7 +341,7 @@ set_from_resource $i3-wm.bar.font i3-wm.bar.font "pango:Source Code Pro Medium 1
 # Run programs when i3 starts
 
 
-exec_always --no-startup-id nc_flash_window
+exec_always --no-startup-id flashfocus
 
 
 # Start the composite manager
