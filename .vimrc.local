@@ -94,15 +94,15 @@ let g:instant_markdown_slow = 1
 "let g:instant_markdown_autoscroll = 0
 
 " plugin/foo.vim
-if has('nvim')
-    finish
-endif
+" if has('nvim')
+"     finish
+" endif
 
-let s:foo = yarp#py3('foo_wrap')
+" let s:foo = yarp#py3('foo_wrap')
 
-func! Bar(v)
-    return s:foo.call('bar',a:v)
-endfunc
+" func! Bar(v)
+"     return s:foo.call('bar',a:v)
+" endfunc
 
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
@@ -114,4 +114,4 @@ setlocal spell
 set spelllang=en_us
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
