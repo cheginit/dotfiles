@@ -7,10 +7,10 @@
   while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
 
   outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
-  tray_output=eDP1
+  tray_output=${outputs[1]}
 
   for m in $outputs; do
-    if [[ $m == "HDMI1" ]]; then
+    if [[ $m == "DP"* ]]; then
         tray_output=$m
     fi
   done
