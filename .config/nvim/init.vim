@@ -35,7 +35,10 @@ Plug 'ncm2/ncm2-jedi'
 " Formater
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-fugitive'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
+
+colorscheme nord
 
 set bg=light
 set go=a
@@ -246,7 +249,19 @@ filetype plugin indent on
 	autocmd FileType xml inoremap ,e <item><Enter><title><++></title><Enter><guid<space>isPermaLink="false"><++></guid><Enter><pubDate><Esc>:put<Space>=strftime('%a, %d %b %Y %H:%M:%S %z')<Enter>kJA</pubDate><Enter><link><++></link><Enter><description><![CDATA[<++>]]></description><Enter></item><Esc>?<title><enter>cit
 	autocmd FileType xml inoremap ,a <a href="<++>"><++></a><++><Esc>F"ci"
 
+" add buffer tab
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
+" map keys for cycling through buffers
+nmap <leader>q :bn<CR>  " Next buffer in list
+nmap <leader>w :bp<CR>  " Previous buffer in list
+
+setlocal spell
+set spelllang=en_us
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
+nnoremap <Space> i_<Esc>r
 
 " vim-autoformat
 noremap <F3> :Autoformat<CR>
