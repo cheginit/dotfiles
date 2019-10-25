@@ -1,5 +1,5 @@
 export GITHUB_DIR="${HOME}/repos/github"
-export APP_DIR="$HOME/.local/bin"
+export APP_DIR="$HOME/.local/apps"
 export N_PREFIX="${APP_DIR}/n"
 export BROWSER="$(which firefox)"
 

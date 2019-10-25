@@ -34,11 +34,15 @@ git_latest(){
 mkd() { mkdir -p "$@" && cd "$@"; }
 
 # copy the argument to clipboard
-c2c(){ echo $1 | clipcopy }
+c2c(){ echo $1 | xclip -sel clip }
 
 # soft link a file using readlink
 lns(){ ln -s $(readlink -f $1) $2}
 
+# cd followed by ls
+cd () {
+	builtin cd "$@" && command ls --color=auto -F
+}
 #==============================aliases=============================#
 alias vup="make clean && make -j4 VIMRUNTIMEDIR=/usr/local/share/vim/vim81 && sudo make install"
 alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh'
@@ -46,9 +50,11 @@ alias pipup='sudo -H pip3 install -U matplotlib numpy yapf flake8 inkscape-figur
 alias lg='lazygit'
 alias rsync='rsync -avz --info=progress2'
 alias vim='TERM=xterm-256color vim'
+alias nv='nvim'
 alias calcurse="calcurse -D ~/.config/calcurse"
 alias open="xdg-open"
 alias cdg="cd ${GITHUB_DIR}"
+alias pac='sudo pacman -S'
 
 if [[ -f ~/.aliases.local ]];then
     source ~/.aliases.local
