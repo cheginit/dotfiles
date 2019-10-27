@@ -40,3 +40,5 @@ prompt simpl
 # al-info
 
 source ~/.dotfiles/shellrc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
