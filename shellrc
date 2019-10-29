@@ -65,7 +65,8 @@ export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 
 export EDITOR=vim
 
-export PATH=${N_PREFIX}/bin:${APP_DIR}/paraview/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:$PATH
+export PATH=${N_PREFIX}/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:$PATH
+# export PATH=${N_PREFIX}/bin:${APP_DIR}/paraview/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 command -v thefuck >/dev/null 2>&1 && \

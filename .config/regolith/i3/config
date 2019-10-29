@@ -14,8 +14,9 @@ set $i3xrocks_config /etc/regolith/i3xrocks/config
 set $compton_config /etc/regolith/compton/config
 
 # path to terminal. Override this to specify a custom terminal.
-set $term --no-startup-id ~/.local/bin/term
-set $terminal_path /usr/bin/$term
+# set $term --no-startup-id ~/.local/bin/term
+# set $terminal_path /usr/bin/$term
+set $terminal_path /usr/bin/alacritty
 
 # #---Dropdown Windows---# #
 # General dropdown window traits. The order can matter.
@@ -58,7 +59,7 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # start a terminal
-bindsym $mod+Return exec ~/.local/bin/term
+bindsym $mod+Return exec $terminal_path
 
 # start a web browser
 bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
@@ -165,7 +166,7 @@ bindsym $mod+Shift+Ctrl+8 move container to workspace $ws18
 bindsym $mod+Shift+Ctrl+9 move container to workspace $ws19
 
 # move focused container to workspace, move to workspace
-bindsym $mod+$alt+1 move container to workspace $ws1; workspace $ws1  
+bindsym $mod+$alt+1 move container to workspace $ws1; workspace $ws1
 bindsym $mod+$alt+2 move container to workspace $ws2; workspace $ws2
 bindsym $mod+$alt+3 move container to workspace $ws3; workspace $ws3
 bindsym $mod+$alt+4 move container to workspace $ws4; workspace $ws4
@@ -266,7 +267,7 @@ set_from_resource $focused_inactive.color.border i3-wm.client.focused_inactive.c
 set_from_resource $focused_inactive.color.background i3-wm.client.focused_inactive.color.background "#073642"
 set_from_resource $focused_inactive.color.text i3-wm.client.focused_inactive.color.text "#839496"
 set_from_resource $focused_inactive.color.indicator i3-wm.client.focused_inactive.color.indicator "#073642"
-set_from_resource $focused_inactive.color.child_border i3-wm.client.focused_inactive.color.child_border 
+set_from_resource $focused_inactive.color.child_border i3-wm.client.focused_inactive.color.child_border
 
 set_from_resource $unfocused.color.border i3-wm.client.unfocused.color.border "#002b36"
 set_from_resource $unfocused.color.background i3-wm.client.unfocused.color.background "#073642"

@@ -10,7 +10,7 @@
   tray_output=${outputs[1]}
 
   for m in $outputs; do
-    if [[ $m == "DP"* ]]; then
+    if [[ $m == *"DP"* ]]; then
         tray_output=$m
     fi
   done
