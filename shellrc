@@ -50,6 +50,7 @@ if [[ $shell == 'zsh'  ]]; then
     # Edit line in vim with ctrl-e:
     autoload edit-command-line; zle -N edit-command-line
     bindkey '^e' edit-command-line
+    source ${GITHUB_DIR}/zsh-wakatime/zsh-wakatime.plugin.zsh
     source ${GITHUB_DIR}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
@@ -63,7 +64,7 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"; a="${a%_}"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"; a="${a%_}"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 
-export EDITOR=vim
+export EDITOR=nvim
 
 export PATH=${N_PREFIX}/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:$PATH
 # export PATH=${N_PREFIX}/bin:${APP_DIR}/paraview/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:$PATH
