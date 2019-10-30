@@ -36,6 +36,7 @@ Plug 'ncm2/ncm2-jedi'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-fugitive'
 Plug 'arcticicestudio/nord-vim'
+Plug 'jalvesaq/Nvim-R'
 call plug#end()
 
 colorscheme nord
@@ -256,6 +257,13 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 " map keys for cycling through buffers
 nmap <leader>q :bn<CR>  " Next buffer in list
 nmap <leader>w :bp<CR>  " Previous buffer in list
+
+" remapping the basic :: send line
+nmap <leader> <Plug>RDSendLine
+" remapping selection :: send multiple lines
+vmap <leader> <Plug>RDSendSelection
+" remapping selection :: send multiple lines + echo lines
+vmap <leader>e <Plug>RESendSelection
 
 setlocal spell
 set spelllang=en_us
