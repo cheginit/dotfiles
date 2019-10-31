@@ -55,7 +55,8 @@ alias nv='nvim'
 alias calcurse="calcurse -D ~/.config/calcurse"
 alias open="xdg-open"
 alias cdg="cd ${GITHUB_DIR}"
-alias pac='sudo pacman -S'
+# alias pac='sudo pacman -S'
+alias api='sudo apt install'
 
 if [[ -f ~/.aliases.local ]];then
     source ~/.aliases.local

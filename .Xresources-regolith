@@ -1,5 +1,5 @@
 #include "/etc/regolith/styles/color-nord"
-#include ".Xresources.d/typeface-ubuntu"
+#include ".Xresources.d/typeface-sourcecodepro-materialdesign"
 #include "/etc/regolith/styles/theme-nordic"
 
 #include "/etc/regolith/styles/st-term"
