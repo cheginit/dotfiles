@@ -3,10 +3,6 @@ source ~/.dotfiles/aliases
 shell=$(basename $SHELL)
 
 if [[ $shell == 'zsh'  ]]; then
-    prompt_context () { }
-    # Enable colors and change prompt:
-    autoload -U colors && colors
-
     # Use vim keys in tab complete menu:
     bindkey -M menuselect 'h' vi-backward-char
     bindkey -M menuselect 'k' vi-up-line-or-history
@@ -50,8 +46,6 @@ if [[ $shell == 'zsh'  ]]; then
     # Edit line in vim with ctrl-e:
     autoload edit-command-line; zle -N edit-command-line
     bindkey '^e' edit-command-line
-    source ${GITHUB_DIR}/zsh-wakatime/zsh-wakatime.plugin.zsh
-    source ${GITHUB_DIR}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # less/man colors
@@ -67,20 +61,12 @@ export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 export EDITOR=nvim
 
 export PATH=${N_PREFIX}/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:$PATH
-# export PATH=${N_PREFIX}/bin:${APP_DIR}/paraview/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 command -v thefuck >/dev/null 2>&1 && \
 eval $(thefuck --alias fuck)
 
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-    source /etc/profile.d/vte.sh
-fi
-
 [ -f ~/.fzf.$shell ] && source ~/.fzf.$shell
-
-oc=$(find ${GITHUB_DIR}/OpenCoarrays -name setup.sh)
-[ ! -z "$oc" ] && source "$oc"
 
 if [[ -f ~/.shellrc.local ]]; then
     source ~/.shellrc.local

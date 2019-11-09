@@ -318,30 +318,28 @@ set_from_resource $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urg
 set_from_resource $i3-wm.bar.font i3-wm.bar.font "pango:Source Code Pro Medium 13, FontAwesome 13"
 
 # Configure the bar
-# bar {
-  # position top
-  # font $i3-wm.bar.font
-  # separator_symbol " "
-  # status_command i3xrocks -c $i3xrocks_config
-  # tray_output primary
-  # strip_workspace_numbers yes
+bar {
+  position top
+  font $i3-wm.bar.font
+  separator_symbol " "
+  status_command i3xrocks -c $i3xrocks_config
+  tray_output primary
+  strip_workspace_numbers yes
 
-  # colors {
-  #     background $i3-wm.bar.background.color
-  #     statusline $i3-wm.bar.statusline.color
-  #     separator  $i3-wm.bar.separator.color
+  colors {
+      background $i3-wm.bar.background.color
+      statusline $i3-wm.bar.statusline.color
+      separator  $i3-wm.bar.separator.color
 
-# #     BORDER  BACKGROUND TEXT
-  #     focused_workspace  $i3-wm.bar.workspace.focused.border.color      $i3-wm.bar.workspace.focused.background.color   $i3-wm.bar.workspace.focused.text.color
-  #     active_workspace   $i3-wm.bar.workspace.active.border.color       $i3-wm.bar.workspace.active.background.color    $i3-wm.bar.workspace.active.text.color
-  #     inactive_workspace $i3-wm.bar.workspace.inactive.border.color     $i3-wm.bar.workspace.inactive.background.color  $i3-wm.bar.workspace.inactive.text.color
-  #     urgent_workspace   $i3-wm.bar.workspace.urgent.border.color       $i3-wm.bar.workspace.urgent.background.color    $i3-wm.bar.workspace.urgent.text.color
-  # }
-# }
+#     BORDER  BACKGROUND TEXT
+      focused_workspace  $i3-wm.bar.workspace.focused.border.color      $i3-wm.bar.workspace.focused.background.color   $i3-wm.bar.workspace.focused.text.color
+      active_workspace   $i3-wm.bar.workspace.active.border.color       $i3-wm.bar.workspace.active.background.color    $i3-wm.bar.workspace.active.text.color
+      inactive_workspace $i3-wm.bar.workspace.inactive.border.color     $i3-wm.bar.workspace.inactive.background.color  $i3-wm.bar.workspace.inactive.text.color
+      urgent_workspace   $i3-wm.bar.workspace.urgent.border.color       $i3-wm.bar.workspace.urgent.background.color    $i3-wm.bar.workspace.urgent.text.color
+  }
+}
 
 # Run programs when i3 starts
-
-
 exec_always --no-startup-id flashfocus --no-flash-fullscreen
 
 
@@ -358,4 +356,4 @@ exec --no-startup-id /usr/bin/unclutter -b
 exec --no-startup-id /usr/bin/xeventbind resolution /usr/bin/wallpaper-refresh
 
 # launch polybar
-exec --no-startup-id $HOME/.config/polybar/launch.sh
+# exec --no-startup-id $HOME/.config/polybar/launch.sh
