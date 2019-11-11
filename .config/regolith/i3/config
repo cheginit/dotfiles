@@ -342,7 +342,6 @@ bar {
 # Run programs when i3 starts
 exec_always --no-startup-id flashfocus --no-flash-fullscreen
 
-
 # Start the composite manager
 exec --no-startup-id compton -f --config $compton_config
 
