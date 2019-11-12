@@ -34,9 +34,9 @@ label_color=xresource:i3xrocks.label.color
 #[nm-vpn]
 #interval=5
 
-[nettraffic]
+# [nettraffic]
 #instance=wlp3s0 Replace with your wifi device if you need
-interval=5
+# interval=5
 
 # Wifi
 #

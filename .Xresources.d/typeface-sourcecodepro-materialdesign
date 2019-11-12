@@ -6,6 +6,8 @@
 #define typeface_terminal   Iosevka Term:pixelsize=18:antialias=true:autohint=true
 
 #define typeface_bar_glyph_wifi 
+#define typeface_bar_glyph_up ▲
+#define typeface_bar_glyph_dn ▼
 #define typeface_bar_glyph_cpu 
 #define typeface_bar_glyph_battery_100 
 #define typeface_bar_glyph_battery_80 
