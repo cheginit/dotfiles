@@ -13,11 +13,6 @@ set $i3xrocks_config /etc/regolith/i3xrocks/config
 # compton config file
 set $compton_config /etc/regolith/compton/config
 
-# path to terminal. Override this to specify a custom terminal.
-# set $term --no-startup-id ~/.local/bin/term
-# set $terminal_path /usr/bin/$term
-set $terminal_path /usr/bin/alacritty
-
 # #---Dropdown Windows---# #
 # General dropdown window traits. The order can matter.
 for_window [instance="dropdown_*"] floating enable
@@ -28,8 +23,7 @@ for_window [instance="dropdown_dropdowncalc"] resize set 800 300
 for_window [instance="dropdown_dropdowncalc"] border pixel 2
 for_window [instance="dropdown_*"] move position center
 
-bindsym $mod+u			exec --no-startup-id ddspawn
-# bindsym $mod+u exec i3-quickterm shell
+bindsym $mod+u exec --no-startup-id ddspawn term
 
 # Color values are defined in ~/.Xresources-regolith
 # These are the labels which define each i3 workspace.
@@ -59,7 +53,7 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # start a terminal
-bindsym $mod+Return exec $terminal_path
+bindsym $mod+Return exec term
 
 # start a web browser
 bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
@@ -353,6 +347,3 @@ exec --no-startup-id /usr/bin/unclutter -b
 
 # Refresh wallpaper on screen resolution change
 exec --no-startup-id /usr/bin/xeventbind resolution /usr/bin/wallpaper-refresh
-
-# launch polybar
-# exec --no-startup-id $HOME/.config/polybar/launch.sh
