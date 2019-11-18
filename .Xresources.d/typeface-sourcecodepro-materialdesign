@@ -1,14 +1,14 @@
-! Typeface: Source Code Pro
-#define typeface_bar_glyph  Source Code Pro Medium 13
-#define typeface_bar        pango:Source Code Pro Medium 13, Material Design Icons 13
-#define typeface_rofi       Source Code Pro Medium 16
+! Typeface: Iosevka Term
+#define typeface_bar_glyph  Iosevka Term 13
+#define typeface_bar        pango:Iosevka Term 13, Material Design Icons 13
+#define typeface_rofi       Iosevka Term 16
 #define typeface_terminal   Iosevka Term:pixelsize=18:antialias=true:autohint=true
 
-#define typeface_bar_glyph_wifi 
-#define typeface_bar_glyph_nowifi 
-#define typeface_bar_glyph_up ▲
-#define typeface_bar_glyph_dn ▼
-#define typeface_bar_glyph_cpu 
+#define typeface_bar_glyph_wifi 
+#define typeface_bar_glyph_wired 
+#define typeface_bar_glyph_up ▴
+#define typeface_bar_glyph_dn ▾
+#define typeface_bar_glyph_cpu 
 #define typeface_bar_glyph_battery_100 
 #define typeface_bar_glyph_battery_80 
 #define typeface_bar_glyph_battery_50 
