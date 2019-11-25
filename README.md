@@ -2,7 +2,7 @@
 
 <img src="https://github.com/cheginit/dotfiles/blob/master/ScreenShot.png" width="800">
 
-The dotfiles are configured based on [Regolith-linux](https://regolith-linux.org/install.html) V1.2.
+The dotfiles are configured based on [Regolith-linux](https://regolith-linux.org/) V1.2.
 
 The dotfiles can be configured as follows:
 ```bash
