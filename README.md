@@ -6,7 +6,6 @@ The dotfiles are configured based on [Regolith-linux](https://regolith-linux.org
 
 The dotfiles can be configured as follows:
 ```bash
-https://gist.github.com/096c86dabfdf42c441e894121f4fcab5.git
 url='https://gist.githubusercontent.com/cheginit/096c86dabfdf42c441e894121f4fcab5/raw/ubuntu_regoligth.sh' && \
 wget -O fresh_install.sh "${url}" && \
 chmod +x fresh_install.sh
