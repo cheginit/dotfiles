@@ -1,6 +1,6 @@
 ! Typeface: Iosevka Term
 #define typeface_bar_glyph  Iosevka Term 13
-#define typeface_bar        pango:Iosevka Term 13, Material Design Icons 13
+#define typeface_bar        pango:Iosevka Term 13, FontAwesome 13
 #define typeface_rofi       Iosevka Term 16
 #define typeface_terminal   Iosevka Term:pixelsize=18:antialias=true:autohint=true
 
@@ -9,13 +9,13 @@
 #define typeface_bar_glyph_up ▴
 #define typeface_bar_glyph_dn ▾
 #define typeface_bar_glyph_cpu 
-#define typeface_bar_glyph_battery_100 
-#define typeface_bar_glyph_battery_80 
-#define typeface_bar_glyph_battery_50 
-#define typeface_bar_glyph_battery_20 
-#define typeface_bar_glyph_battery_0 
-#define typeface_bar_glyph_battery_charging 
-#define typeface_bar_glyph_battery_ac 
-#define typeface_bar_glyph_battery_unknown 
-#define typeface_bar_glyph_time 
-#define typeface_bar_glyph_workspace 
+#define typeface_bar_glyph_battery_100 
+#define typeface_bar_glyph_battery_80 
+#define typeface_bar_glyph_battery_50 
+#define typeface_bar_glyph_battery_20 
+#define typeface_bar_glyph_battery_0 
+#define typeface_bar_glyph_battery_charging
+#define typeface_bar_glyph_battery_ac 
+#define typeface_bar_glyph_battery_unknown 
+#define typeface_bar_glyph_time 
+#define typeface_bar_glyph_workspace 
