@@ -23,10 +23,15 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 command=/usr/share/i3xrocks/$BLOCK_NAME
-separator_block_width=40
+separator_block_width=35
 markup=pango
 color=xresource:i3xrocks.value.color
 label_color=xresource:i3xrocks.label.color
+
+# Help
+# [help]
+# full_text=xresource:i3xrocks.label.help
+# command=/usr/bin/conky-toggle
 
 # Network manager VPN
 #
@@ -34,18 +39,20 @@ label_color=xresource:i3xrocks.label.color
 #[nm-vpn]
 #interval=5
 
-[nettraffic]
-command=~/.local/bin/nettraffic
-#instance=wlp3s0 Replace with your wifi device if you need
-interval=2
-
 # Wifi
 #
 # Displays the wifi network's name
 # If the auto-discovered wifi device is incorrect,
 # override the "instance" value with the desired device
-[wifi2]
-#instance=wlp3s0 Replace with your wifi device if you need
+#[wifi2]
+# Replace with your wifi device if you need on next line
+#instance=wlp3s0
+#interval=5
+
+# nettraffic
+#
+# Displays network load
+[nettraffic]
 interval=5
 
 # Keyboard layout
@@ -79,8 +86,14 @@ interval=30
 percent_color=true
 #icon_only=true
 
-# Date Time
+# Rofication
 #
+# Displays notifications.
+[rofication]
+command=/usr/share/i3xrocks/rofication-statusi3blocks.py
+interval=10
+
+# Date Time
 [time]
 interval=60
 
