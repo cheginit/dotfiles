@@ -202,13 +202,16 @@ bindsym $mod+Escape exec gnome-screensaver-command --lock
 bindsym $mod+Shift+s exec systemctl suspend
 
 # shortcuts for common system configuration tasks
-bindsym $mod+c exec gnome-control-center
+# bindsym $mod+c exec gnome-control-center
 bindsym $mod+w exec gnome-control-center wifi
 bindsym $mod+b exec gnome-control-center bluetooth
 bindsym $mod+d exec gnome-control-center display
 bindsym $mod+n exec /usr/share/rofication/rofication-gui.py
 bindsym $mod+p exec gnome-control-center power
 bindsym $mod+s exec gnome-control-center sound
+
+# shortcut for running a calculator
+bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
 
 # resize window (you can also use the mouse for that)
 mode "Resize Mode" {
