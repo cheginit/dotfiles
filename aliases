@@ -50,7 +50,7 @@ alias vim='nvim'
 alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh'
 alias pipup='pip3 install --user -U matplotlib numpy yapf flake8 inkscape-figures wakatime pybind11 thefuck grip fortran-linter pywal pynvim blacktex betterbib pytype flashfocus'
 alias lg='lazygit'
-alias rsync='rsync -avz --info=progress2'
+alias rsync='rsync -ahvz --info=progress2'
 alias nv='nvim'
 alias calcurse="calcurse -D ~/.config/calcurse"
 alias open="xdg-open"
