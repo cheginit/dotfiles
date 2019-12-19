@@ -32,8 +32,9 @@ A list of some of the packages that will be installed with the dotfile installer
 - Remote terminal: [tmux](https://github.com/tmux/tmux) with [.tmux](https://github.com/gpakosz/.tmux) config
 - Bootable USB creator: [etcher](https://github.com/balena-io/etcher/releases)
 - Cloud storage: [Dropbox](https://www.dropbox.com/install-linux)
+- Utilities: [Bat](https://github.com/sharkdp/bat), [autojump](https://github.com/wting/autojump)
 
-Also, [firefox gnome theme](https://github.com/rafaelmardojai/firefox-gnome-theme) can be used for a more unified and polished look.
+Also, [minimal functional fox](https://github.com/turing753/minimal-functional-fox) can be used for a more unified and polished look.
 
 After successful execution of the script run the following commands to set `zsh` as the default shell:
 ```bash
