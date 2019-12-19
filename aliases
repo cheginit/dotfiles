@@ -57,6 +57,7 @@ alias open="xdg-open"
 alias cdg="cd ${GITHUB_DIR}"
 # alias pac='sudo pacman -S'
 alias api='sudo apt install'
+alias cat="bat"
 
 if [[ -f ~/.aliases.local ]];then
     source ~/.aliases.local

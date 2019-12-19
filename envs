@@ -2,6 +2,7 @@ export GITHUB_DIR="${HOME}/repos/github"
 export APP_DIR="$HOME/.local/apps"
 export N_PREFIX="${APP_DIR}/n"
 export BROWSER="$(which firefox)"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 if [[ -f ~/.envs.local ]]; then
     source ~/.envs.local
