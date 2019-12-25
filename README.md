@@ -15,10 +15,10 @@ Then modify the script as needed and run it (`./fresh_install.sh`).
 A list of some of the packages that will be installed with the dotfile installer are provided below:
 - IDE (latex, python, fortran, etc.): [neovim](https://github.com/neovim/neovim)
 - Photo editor: [GIMP](https://launchpad.net/~otto-kesselgulasch/+archive/ubuntu/gimp)
-- Vector graphics: `inkscape` with (TexText)[https://github.com/textext/textext]
+- Vector graphics: `inkscape` with [TexText](https://github.com/textext/textext)
 - Raw photo editor: [rawtherapee](https://launchpad.net/~dhor/+archive/ubuntu/myway)
 - EMail: `neomutt` (can be configured using [mutt-wizard](https://github.com/LukeSmithxyz/mutt-wizard))
-- File manager: `nnn` and (`lf`)[https://github.com/gokcehan/lf]
+- File manager: `nnn` and [`lf`](https://github.com/gokcehan/lf)
 - Media player: `VLC`
 - Documents: `zathura`, [PDFStudioViewer](https://www.qoppa.com/pdfstudioviewer/download/), [pandoc](https://github.com/jgm/pandoc/releases), [Zotero](https://www.zotero.org/download/)
 - Music: [Spotify](https://snapcraft.io/spotify)
