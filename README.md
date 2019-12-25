@@ -15,10 +15,10 @@ Then modify the script as needed and run it (`./fresh_install.sh`).
 A list of some of the packages that will be installed with the dotfile installer are provided below:
 - IDE (latex, python, fortran, etc.): [neovim](https://github.com/neovim/neovim)
 - Photo editor: [GIMP](https://launchpad.net/~otto-kesselgulasch/+archive/ubuntu/gimp)
-- Vector graphics: `inkscape`
+- Vector graphics: `inkscape` with (TexText)[https://github.com/textext/textext]
 - Raw photo editor: [rawtherapee](https://launchpad.net/~dhor/+archive/ubuntu/myway)
 - EMail: `neomutt` (can be configured using [mutt-wizard](https://github.com/LukeSmithxyz/mutt-wizard))
-- File manager: `nnn`
+- File manager: `nnn` and (`lf`)[https://github.com/gokcehan/lf]
 - Media player: `VLC`
 - Documents: `zathura`, [PDFStudioViewer](https://www.qoppa.com/pdfstudioviewer/download/), [pandoc](https://github.com/jgm/pandoc/releases), [Zotero](https://www.zotero.org/download/)
 - Music: [Spotify](https://snapcraft.io/spotify)
@@ -32,7 +32,7 @@ A list of some of the packages that will be installed with the dotfile installer
 - Remote terminal: [tmux](https://github.com/tmux/tmux) with [.tmux](https://github.com/gpakosz/.tmux) config
 - Bootable USB creator: [etcher](https://github.com/balena-io/etcher/releases)
 - Cloud storage: [Dropbox](https://www.dropbox.com/install-linux)
-- Utilities: [Bat](https://github.com/sharkdp/bat), [autojump](https://github.com/wting/autojump)
+- Utilities: [bat](https://github.com/sharkdp/bat), [autojump](https://github.com/wting/autojump)
 
 Also, [minimal functional fox](https://github.com/turing753/minimal-functional-fox) can be used for a more unified and polished look.
 
