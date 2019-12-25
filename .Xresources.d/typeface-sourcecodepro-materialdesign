@@ -14,14 +14,12 @@
 #define typeface_bar_glyph_battery_50 
 #define typeface_bar_glyph_battery_20 
 #define typeface_bar_glyph_battery_0 
-#define typeface_bar_glyph_battery_charging
+#define typeface_bar_glyph_battery_charging 
 #define typeface_bar_glyph_battery_ac 
 #define typeface_bar_glyph_battery_unknown 
 #define typeface_bar_glyph_time 
 #define typeface_bar_glyph_workspace 
-
 #define typeface_bar_glyph_notify_none 
 #define typeface_bar_glyph_notify_some 
 #define typeface_bar_glyph_notify_error 
-
 #define typeface_bar_glyph_help 
