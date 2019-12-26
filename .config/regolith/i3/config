@@ -91,18 +91,20 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+# move workspaces to outputs
+bindsym $mod+Ctrl+Shift+Left move workspace to output left
+bindsym $mod+Ctrl+Shift+Down move workspace to output down
+bindsym $mod+Ctrl+Shift+Up move workspace to output up
+bindsym $mod+Ctrl+Shift+Right move workspace to output right
+
 # toggle split orientation
 bindsym $mod+BackSpace split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change gaps interactively
-bindsym $mod+minus gaps inner current minus 6
-bindsym $mod+plus gaps inner current plus 6
-
 # show/hide keybindings
-bindsym $mod+Shift+question exec --no-startup-id /usr/bin/conky-toggle
+bindsym $mod+Shift+question exec --no-startup-id /usr/bin/remontoire-toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
@@ -113,7 +115,7 @@ bindsym $mod+Shift+t focus mode_toggle
 # toggle tabbed mode
 bindsym $mod+t layout toggle tabbed splith splitv
 
-# move to workspace
+# switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -202,13 +204,16 @@ bindsym $mod+Escape exec gnome-screensaver-command --lock
 bindsym $mod+Shift+s exec systemctl suspend
 
 # shortcuts for common system configuration tasks
-# bindsym $mod+c exec gnome-control-center
 bindsym $mod+w exec gnome-control-center wifi
 bindsym $mod+b exec gnome-control-center bluetooth
 bindsym $mod+d exec gnome-control-center display
 bindsym $mod+p exec gnome-control-center power
 bindsym $mod+s exec gnome-control-center sound
 bindsym $mod+n exec /usr/share/rofication/rofication-gui.py
+
+# i3-snapshot for load/save current layout
+bindsym $mod+comma  exec /usr/local/bin/i3-snapshot -o > /tmp/i3-snapshot
+bindsym $mod+period exec /usr/local/bin/i3-snapshot -c < /tmp/i3-snapshot
 
 # shortcut for running a calculator
 bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
@@ -235,6 +240,10 @@ mode "Resize Mode" {
         bindsym Shift+k resize grow height 12 px or 12 ppt
         bindsym Shift+j resize shrink height 12 px or 12 ppt
         bindsym Shift+l resize grow width 12 px or 12 ppt
+
+        # change gaps interactively
+        bindsym $mod+minus gaps inner current minus 6
+        bindsym $mod+plus gaps inner current plus 6
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
