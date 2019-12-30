@@ -48,7 +48,7 @@ cd () {
 # alias vim='TERM=xterm-256color vim'
 alias vim='nvim'
 alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh'
-alias pipup='pip3 install --user -U matplotlib numpy yapf flake8 inkscape-figures wakatime pybind11 thefuck grip fortran-linter pywal pynvim blacktex betterbib pytype flashfocus'
+alias pipup='pip3 install --user -U matplotlib numpy yapf flake8 inkscape-figures pybind11 thefuck grip fortran-linter pywal pynvim blacktex betterbib pytype flashfocus FoBiS.py ford'
 alias lg='lazygit'
 alias rsync='rsync -ahvz --info=progress2'
 alias nv='nvim'
