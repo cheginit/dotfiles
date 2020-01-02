@@ -1,5 +1,6 @@
 ! Typeface: Iosevka Term
 #define typeface_bar_glyph  Iosevka Term 13
+#define typeface_wm         Iosevka Term 13
 #define typeface_bar        pango:Iosevka Term 13, FontAwesome 13
 #define typeface_rofi       Iosevka Term 16
 #define typeface_terminal   Iosevka Term:pixelsize=18:antialias=true:autohint=true
@@ -16,10 +17,24 @@
 #define typeface_bar_glyph_battery_0 
 #define typeface_bar_glyph_battery_charging 
 #define typeface_bar_glyph_battery_ac 
-#define typeface_bar_glyph_battery_unknown 
+#define typeface_bar_glyph_battery_unknown 
 #define typeface_bar_glyph_time 
 #define typeface_bar_glyph_workspace 
+
+#define typeface_bar_glyph_media_playing 
+#define typeface_bar_glyph_media_paused 
+
 #define typeface_bar_glyph_notify_none 
 #define typeface_bar_glyph_notify_some 
 #define typeface_bar_glyph_notify_error 
 #define typeface_bar_glyph_help 
+#define typeface_bar_glyph_thermometer 
+#define typeface_bar_glyph_sound S
+#define typeface_bar_glyph_mute M
+#define typeface_bar_glyph_memory R
+
+#define typeface_bar_glyph_on +
+#define typeface_bar_glyph_off -
+
+#define typeface_bar_glyph_numlock N
+#define typeface_bar_glyph_capslock C
