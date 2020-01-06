@@ -56,7 +56,7 @@ hide_edge_borders smart
 bindsym $mod+Return exec term
 
 # start a web browser
-bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
+bindsym $mod+Shift+Return exec /usr/bin/firefox
 
 # kill focused window
 bindsym $mod+q			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
@@ -337,7 +337,7 @@ bar {
       statusline $i3-wm.bar.statusline.color
       separator  $i3-wm.bar.separator.color
 
-#     BORDER  BACKGROUND TEXT
+# BORDER  BACKGROUND TEXT
       focused_workspace  $i3-wm.bar.workspace.focused.border.color      $i3-wm.bar.workspace.focused.background.color   $i3-wm.bar.workspace.focused.text.color
       active_workspace   $i3-wm.bar.workspace.active.border.color       $i3-wm.bar.workspace.active.background.color    $i3-wm.bar.workspace.active.text.color
       inactive_workspace $i3-wm.bar.workspace.inactive.border.color     $i3-wm.bar.workspace.inactive.background.color  $i3-wm.bar.workspace.inactive.text.color
