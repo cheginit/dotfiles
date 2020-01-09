@@ -1,6 +1,6 @@
 #include "/etc/regolith/styles/nord/color"
 #include ".Xresources.d/typeface"
-#include "/etc/regolith/styles/nord/theme"
+#include ".Xresources.d/theme"
 
 #include "/etc/regolith/styles/st-term"
 #include "/etc/regolith/styles/i3-wm"
