@@ -15,3 +15,5 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/shellrc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
