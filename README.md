@@ -34,7 +34,12 @@ A list of some of the packages that will be installed with the dotfile installer
 - Cloud storage: [Dropbox](https://www.dropbox.com/install-linux)
 - Utilities: [bat](https://github.com/sharkdp/bat), [autojump](https://github.com/wting/autojump)
 
-Also, [minimal functional fox](https://github.com/turing753/minimal-functional-fox) can be used for a more unified and polished look.
+Also, [minimal functional fox](https://github.com/turing753/minimal-functional-fox) theme can be used for a more unified and polished look. I find the following Firefox add-ons useful:
+- [nightTab](https://addons.mozilla.org/en-US/firefox/addon/nighttab/)
+- [vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff)
+- [uBlock](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
+- [Session Sync](https://addons.mozilla.org/en-US/firefox/addon/session-sync)
+- [HTTPS everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere)
 
 After successful execution of the script run the following commands to set `zsh` as the default shell:
 ```bash
