@@ -1,9 +1,9 @@
 ! Typeface: Cascadia Code PL
-#define typeface_bar_glyph  Cascadia Code PL 13
-#define typeface_wm         Cascadia Code PL 13
-#define typeface_bar        pango:Cascadia Code PL 13, FontAwesome 13
-#define typeface_rofi       Cascadia Code PL 16
-#define typeface_terminal   Cascadia Code PL:pixelsize=18:antialias=true:autohint=true
+#define typeface_bar_glyph  Cascadia Code PL 12
+#define typeface_wm         Cascadia Code PL 12
+#define typeface_bar        pango:Cascadia Code PL 12, FontAwesome 12
+#define typeface_rofi       Cascadia Code PL 15
+#define typeface_terminal   Cascadia Code PL:pixelsize=17:antialias=true:autohint=true
 
 #define typeface_bar_glyph_wifi 
 #define typeface_bar_glyph_wired 
