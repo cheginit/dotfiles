@@ -44,18 +44,15 @@ cd () {
 	builtin cd "$@" && command ls --color=auto -F
 }
 #==============================aliases=============================#
-# alias vup="make clean && make -j4 VIMRUNTIMEDIR=/usr/local/share/vim/vim81 && sudo make install"
-# alias vim='TERM=xterm-256color vim'
 alias vim='nvim'
+alias nv='nvim'
 alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh'
-alias pipup='pip3 install --user -U matplotlib numpy yapf flake8 inkscape-figures pybind11 thefuck grip fortran-linter pywal pynvim blacktex betterbib pytype flashfocus FoBiS.py ford'
+alias pipup='pip3 install --user -U matplotlib numpy yapf flake8 inkscape-figures pybind11 thefuck grip fortran-linter pynvim blacktex betterbib flashfocus FoBiS.py ford'
 alias lg='lazygit'
 alias rsync='rsync -ahvz --info=progress2'
-alias nv='nvim'
 alias calcurse="calcurse -D ~/.config/calcurse"
 alias open="xdg-open"
 alias cdg="cd ${GITHUB_DIR}"
-# alias pac='sudo pacman -S'
 alias api='sudo apt install'
 alias cat="bat"
 

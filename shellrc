@@ -63,8 +63,6 @@ export EDITOR=nvim
 export PATH=${N_PREFIX}/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
-source /usr/share/autojump/autojump.sh
-
 command -v thefuck >/dev/null 2>&1 && \
 eval $(thefuck --alias fuck)
 
