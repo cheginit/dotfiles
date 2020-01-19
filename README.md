@@ -33,6 +33,7 @@ A list of some of the packages that will be installed with the dotfile installer
 - Bootable USB creator: [etcher](https://github.com/balena-io/etcher/releases)
 - Cloud storage: [Dropbox](https://www.dropbox.com/install-linux)
 - Utilities: [bat](https://github.com/sharkdp/bat), [autojump](https://github.com/wting/autojump), [z](https://github.com/agkozak/zsh-z)
+- Wallpaper: from [wallpapers](https://github.com/turing753/wallpapers) repo
 
 Also, [minimal functional fox](https://github.com/turing753/minimal-functional-fox) theme can be used for a more unified and polished look. I find the following Firefox add-ons useful:
 - [nightTab](https://addons.mozilla.org/en-US/firefox/addon/nighttab/)
