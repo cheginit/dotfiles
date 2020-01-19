@@ -241,10 +241,6 @@ mode "Resize Mode" {
         bindsym Shift+j resize shrink height 12 px or 12 ppt
         bindsym Shift+l resize grow width 12 px or 12 ppt
 
-        # change gaps interactively
-        bindsym $mod+minus gaps inner current minus 6
-        bindsym $mod+plus gaps inner current plus 6
-
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -259,6 +255,10 @@ new_float pixel 1
 # Gaps (i3-gaps)
 gaps inner 5
 gaps outer 0
+
+# change gaps interactively
+bindsym $mod+minus gaps inner current minus 6
+bindsym $mod+plus gaps inner current plus 6
 
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
