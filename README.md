@@ -27,12 +27,12 @@ A list of some of the packages that will be installed with the dotfile installer
 - Browser: `firefox`, [Chrome](https://www.google.com/chrome/)
 - Python: [Miniconda](https://repo.continuum.io/miniconda/)
 - Shell: `zsh` with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-- Terminal font: [Iosevka Term](https://github.com/romkatv/dotfiles-public/tree/master/.local/share/fonts/NerdFonts)
+- Terminal font: [Cascadia PL](https://github.com/microsoft/cascadia-code)
 - Terminal history manager: [fzf](https://github.com/junegunn/fzf.vim) (ctrl+r)
 - Remote terminal: [tmux](https://github.com/tmux/tmux) with [.tmux](https://github.com/gpakosz/.tmux) config
 - Bootable USB creator: [etcher](https://github.com/balena-io/etcher/releases)
 - Cloud storage: [Dropbox](https://www.dropbox.com/install-linux)
-- Utilities: [bat](https://github.com/sharkdp/bat), [autojump](https://github.com/wting/autojump)
+- Utilities: [bat](https://github.com/sharkdp/bat), [autojump](https://github.com/wting/autojump), [z](https://github.com/agkozak/zsh-z)
 
 Also, [minimal functional fox](https://github.com/turing753/minimal-functional-fox) theme can be used for a more unified and polished look. I find the following Firefox add-ons useful:
 - [nightTab](https://addons.mozilla.org/en-US/firefox/addon/nighttab/)
@@ -41,6 +41,34 @@ Also, [minimal functional fox](https://github.com/turing753/minimal-functional-f
 - [Session Sync](https://addons.mozilla.org/en-US/firefox/addon/session-sync)
 - [HTTPS everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere)
 
+I made the following changed to the Firefox theme file `~/.mozilla/firefox/<profile>-release/chrome/minimal-functional-fox/userChrome.css`:
+```bash
+diff --git a/userChrome.css b/userChrome.css
+index b136b4a..b32d487 100644
+--- a/userChrome.css
++++ b/userChrome.css
+@@ -2,18 +2,18 @@ html#main-window {
+        --color-bg: #1e1f29;
+        --toolbar-bgcolor: var(--color-bg) !important;
+
+-       --gap-between-tabs: 5px;
++       --gap-between-tabs: 3px;
+        --margin-after-tab-list: 8x;
+        --margin-before-tab-list: 8px;
+        --tab-font: "Cantarell", sans-serif;
+        --tab-font-weight: 700;
+        --tab-height: 32px;
+-       --tabs-container-height: 140px;
++       --tabs-container-height: 100px;
+
+        --urlbar-container-margin: 5px;
+        --urlbar-list-width: 60%;
+        --urlbar-text-font: "mononoki Nerd Font", sans-serif;
+-       --urlbar-text-size: 15pt;
++       --urlbar-text-size: 13pt;
+        --urlbar-text-weight: 700;
+
+```
 After successful execution of the script run the following commands to set `zsh` as the default shell:
 ```bash
 sudo passwd root && \
