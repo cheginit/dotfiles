@@ -41,7 +41,7 @@ Also, [minimal functional fox](https://github.com/turing753/minimal-functional-f
 - [Session Sync](https://addons.mozilla.org/en-US/firefox/addon/session-sync)
 - [HTTPS everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere)
 
-I made the following changed to the Firefox theme file after installing minimal functional fox theme (`~/.mozilla/firefox/<profile>-release/chrome/userChrome.css`):
+I made the following changes to the Firefox theme file after installing minimal functional fox theme (`~/.mozilla/firefox/<profile>-release/chrome/userChrome.css`):
 ```diff
 diff --git a/userChrome.css b/userChrome.css
 index b136b4a..b32d487 100644
