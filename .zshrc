@@ -1,6 +1,6 @@
 export ZSH="${HOME}/.oh-my-zsh"
 
-ZSH_THEME="gnzh"
+ZSH_THEME="oxide"
 
 plugins=(
     extract
@@ -15,5 +15,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/shellrc
+zstyle ':completion:*' menu select
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

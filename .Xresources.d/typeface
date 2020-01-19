@@ -1,9 +1,9 @@
-! Typeface: Iosevka Term
-#define typeface_bar_glyph  Iosevka Term 13
-#define typeface_wm         Iosevka Term 13
-#define typeface_bar        pango:Iosevka Term 13, FontAwesome 13
-#define typeface_rofi       Iosevka Term 16
-#define typeface_terminal   Iosevka Term:pixelsize=18:antialias=true:autohint=true
+! Typeface: Cascadia Code PL
+#define typeface_bar_glyph  Cascadia Code PL 13
+#define typeface_wm         Cascadia Code PL 13
+#define typeface_bar        pango:Cascadia Code PL 13, FontAwesome 13
+#define typeface_rofi       Cascadia Code PL 16
+#define typeface_terminal   Cascadia Code PL:pixelsize=18:antialias=true:autohint=true
 
 #define typeface_bar_glyph_wifi 
 #define typeface_bar_glyph_wired 
