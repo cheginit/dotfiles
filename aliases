@@ -55,6 +55,7 @@ alias cdg="cd ${GITHUB_DIR}"
 alias api='sudo apt install'
 alias cat="bat"
 alias pip="pip3"
+alias tdi="td --interactive"
 
 if [[ -f ~/.aliases.local ]];then
     source ~/.aliases.local
