@@ -1,4 +1,4 @@
-# i3 config file (v5) for Regolith Desktop Environment
+# i3 config file for the Regolith Desktop Environment
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
@@ -7,23 +7,8 @@
 set $mod Mod4
 set $alt Mod1
 
-# i3xrocks config file
+# i3xrocks config file. Override this for custom status indicators on the bar.
 set $i3xrocks_config ~/.config/regolith/i3xrocks/config
-
-# compton config file
-set $compton_config /etc/regolith/compton/config
-
-# #---Dropdown Windows---# #
-# General dropdown window traits. The order can matter.
-for_window [instance="dropdown_*"] floating enable
-for_window [instance="dropdown_*"] move scratchpad
-for_window [instance="dropdown_*"] sticky enable
-for_window [instance="dropdown_*"] scratchpad show
-for_window [instance="dropdown_dropdowncalc"] resize set 800 300
-for_window [instance="dropdown_dropdowncalc"] border pixel 2
-for_window [instance="dropdown_*"] move position center
-
-bindsym $mod+u exec --no-startup-id ddspawn term
 
 # Color values are defined in ~/.Xresources-regolith
 # These are the labels which define each i3 workspace.
@@ -53,14 +38,14 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # start a terminal
-bindsym $mod+Return exec term
+bindsym $mod+Return exec command -v alacritty >/dev/null 2>&1 && alacritty || st
 
 # start a web browser
-bindsym $mod+Shift+Return exec /usr/bin/firefox
+bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
 
 # kill focused window
-bindsym $mod+q			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
-bindsym $mod+Shift+q    [con_id="__focused__" instance="^(?!dropdown_).*$"] exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
+bindsym $mod+q [con_id="__focused__"] kill
+bindsym $mod+Shift+q [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
 
 set_from_resource $rofiTheme rofi.theme "regolith-theme"
 
@@ -108,6 +93,8 @@ bindsym $mod+Shift+question exec --no-startup-id /usr/bin/remontoire-toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
+bindsym $mod+Ctrl+m move to scratchpad
+bindsym $mod+Ctrl+a scratchpad show
 
 # change focus between tiling / floating windows
 bindsym $mod+Shift+t focus mode_toggle
@@ -204,19 +191,25 @@ bindsym $mod+Escape exec gnome-screensaver-command --lock
 bindsym $mod+Shift+s exec systemctl suspend
 
 # shortcuts for common system configuration tasks
-bindsym $mod+w exec gnome-control-center wifi
-bindsym $mod+b exec gnome-control-center bluetooth
+bindsym $mod+g exec gnome-control-center
 bindsym $mod+d exec gnome-control-center display
-bindsym $mod+p exec gnome-control-center power
-bindsym $mod+s exec gnome-control-center sound
+bindsym $mod+w exec gnome-control-center wifi
+bindsym $mod+Shift+n exec nautilus
 bindsym $mod+n exec /usr/share/rofication/rofication-gui.py
-
-# i3-snapshot for load/save current layout
-bindsym $mod+comma  exec /usr/local/bin/i3-snapshot -o > /tmp/i3-snapshot
-bindsym $mod+period exec /usr/local/bin/i3-snapshot -c < /tmp/i3-snapshot
 
 # shortcut for running a calculator
 bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
+
+# i3-snapshot for load/save current layout
+bindsym $mod+comma  exec /usr/bin/i3-snapshot -o > /tmp/i3-snapshot
+bindsym $mod+period exec /usr/bin/i3-snapshot -c < /tmp/i3-snapshot
+
+# Toggle bar visibility
+bindsym $mod+i bar mode toggle
+
+# Cause Settings app to float above tiled windows
+floating_maximum_size -1 x -1
+for_window [class="Gnome-control-center"] floating enable
 
 # resize window (you can also use the mouse for that)
 mode "Resize Mode" {
@@ -241,6 +234,12 @@ mode "Resize Mode" {
         bindsym Shift+j resize shrink height 12 px or 12 ppt
         bindsym Shift+l resize grow width 12 px or 12 ppt
 
+        # change gaps interactively
+        bindsym minus gaps inner current minus 6
+        bindsym plus gaps inner current plus 6
+        bindsym Shift+minus gaps inner current minus 12
+        bindsym Shift+plus gaps inner current plus 12
+
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -252,17 +251,14 @@ bindsym $mod+r mode "Resize Mode"
 new_window pixel 1
 new_float pixel 1
 
-# Gaps (i3-gaps)
+# Specify the distance between windows in pixels. (i3-gaps)
 gaps inner 5
 gaps outer 0
-
-# change gaps interactively
-bindsym $mod+minus gaps inner current minus 6
-bindsym $mod+plus gaps inner current plus 6
 
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
 
+# Create variables from Xresources for i3's look.
 set_from_resource $focused.color.border i3-wm.client.focused.color.border "#002b36"
 set_from_resource $focused.color.background i3-wm.client.focused.color.background "#586e75"
 set_from_resource $focused.color.text i3-wm.client.focused.color.text "#fdf6e3"
@@ -301,6 +297,7 @@ popup_during_fullscreen smart
 # window focus follows your mouse movements as the mouse crosses window borders
 focus_follows_mouse no
 
+# Create variables from Xresources for i3bars's look.
 set_from_resource $i3-wm.bar.background.color i3-wm.bar.background.color "#002b36"
 set_from_resource $i3-wm.bar.statusline.color i3-wm.bar.statusline.color "#93a1a1"
 set_from_resource $i3-wm.bar.separator.color i3-wm.bar.separator.color "#268bd2"
@@ -322,8 +319,9 @@ set_from_resource $i3-wm.bar.workspace.urgent.background.color i3-wm.bar.workspa
 set_from_resource $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urgent.text.color "#fdf6e3"
 
 set_from_resource $i3-wm.bar.font i3-wm.bar.font "pango:Source Code Pro Medium 13, FontAwesome 13"
+font $i3-wm.bar.font
 
-# Configure the bar
+# The bar configuration
 bar {
   position top
   font $i3-wm.bar.font
@@ -337,7 +335,7 @@ bar {
       statusline $i3-wm.bar.statusline.color
       separator  $i3-wm.bar.separator.color
 
-# BORDER  BACKGROUND TEXT
+#                        BORDER  BACKGROUND TEXT
       focused_workspace  $i3-wm.bar.workspace.focused.border.color      $i3-wm.bar.workspace.focused.background.color   $i3-wm.bar.workspace.focused.text.color
       active_workspace   $i3-wm.bar.workspace.active.border.color       $i3-wm.bar.workspace.active.background.color    $i3-wm.bar.workspace.active.text.color
       inactive_workspace $i3-wm.bar.workspace.inactive.border.color     $i3-wm.bar.workspace.inactive.background.color  $i3-wm.bar.workspace.inactive.text.color
@@ -345,7 +343,7 @@ bar {
   }
 }
 
-# Run programs when i3 starts
+# The following exec calls run programs in the background when i3 starts.
 
 # Start the installed regolith-compositor
 exec --no-startup-id /usr/share/regolith-compositor/init
@@ -358,6 +356,3 @@ exec --no-startup-id /usr/bin/regolith-ftue
 
 # Hide the mouse pointer if unused for a duration
 exec --no-startup-id /usr/bin/unclutter -b
-
-# Force i3 to use correct workspace label upon start
-exec --no-startup-id /usr/bin/i3-msg workspace "$(xrescat i3-wm.workspace.01.name)"

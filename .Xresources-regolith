@@ -1,9 +1,16 @@
-#include "/etc/regolith/styles/nord/color"
-#include ".Xresources.d/typeface"
-#include ".Xresources.d/theme"
+! -- Styles - Colors
+#include "/etc/regolith/styles/cahuella/color"
 
+! -- Styles - Fonts
+#include ".Xresources.d/typeface"
+
+! -- Styles - Theme
+#include "/etc/regolith/styles/cahuella/theme"
+
+! -- Applications
+! These files map values defined above into specific app settings.
 #include "/etc/regolith/styles/st-term"
 #include "/etc/regolith/styles/i3-wm"
 #include "/etc/regolith/styles/i3xrocks"
-#include "/etc/regolith/styles/gnome"
 #include "/etc/regolith/styles/rofi"
+#include "/etc/regolith/styles/gnome"
