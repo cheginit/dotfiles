@@ -41,7 +41,7 @@ label_color=xresource:i3xrocks.label.color
 # override the "instance" value with the desired device
 #[wifi2]
 # Replace with your wifi device if you need on next line
-#instance=wlp3s0 
+#instance=wlp3s0
 #interval=5
 
 # nettraffic
@@ -88,3 +88,4 @@ interval=10
 #interval=1
 #filter_list=evince libreoffice # uncomment to show only for these window instances
 #short_length=10 # uncomment to change maximum size of shortened text
+
