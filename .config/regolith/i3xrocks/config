@@ -69,7 +69,7 @@ min_width=100%
 # Displays total percentage charge left of specified battery.
 [battery3]
 interval=30
-instance=BAT1
+# instance=BAT1
 
 # Rofication
 #
