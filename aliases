@@ -47,7 +47,7 @@ cd () {
 alias vim='nvim'
 alias nv='nvim'
 alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh'
-alias pipup='pip3 install --user -U thefuck flashfocus td-cli'
+alias pipup='pip3 install --user -U thefuck flashfocus td-cli jedi pynvim'
 alias lg='lazygit'
 alias rsync='rsync -ahvz --info=progress2'
 alias open="xdg-open"
