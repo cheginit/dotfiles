@@ -194,7 +194,6 @@ bindsym $mod+Shift+s exec systemctl suspend
 bindsym $mod+g exec gnome-control-center
 bindsym $mod+d exec gnome-control-center display
 bindsym $mod+w exec gnome-control-center wifi
-bindsym $mod+Shift+n exec nautilus
 bindsym $mod+n exec /usr/share/rofication/rofication-gui.py
 
 # shortcut for running a calculator
@@ -356,3 +355,7 @@ exec --no-startup-id /usr/bin/regolith-ftue
 
 # Hide the mouse pointer if unused for a duration
 exec --no-startup-id /usr/bin/unclutter -b
+
+# Flashfocus
+exec_always --no-startup-id flashfocus
+bindsym $mod+Shift+n exec --no-startup-id nc_flash_window
