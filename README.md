@@ -34,14 +34,14 @@ A list of some of the packages that will be installed with the dotfile installer
 - Utilities: [`bat`](https://github.com/sharkdp/bat), [`z`](https://github.com/agkozak/zsh-z), [`ack`](https://beyondgrep.com/), [`fzf`](https://github.com/junegunn/fzf.vim) (ctrl+r), [`gotop`](https://github.com/cjbassi/gotop), [`imgp`](https://github.com/jarun/imgp), [`rofi-calc`](https://github.com/svenstaro/rofi-calc) (mod+c), [`thefuck`](https://github.com/nvbn/thefuck)
 - Wallpaper: from [wallpapers](https://github.com/turing753/wallpapers) repo
 
-Also, [minimal functional fox](https://github.com/turing753/minimal-functional-fox) theme can be used for a more unified and polished look. I find the following Firefox add-ons useful:
+Also, [minimal functional fox](https://github.com/turing753/minimal-functional-fox) theme will be installed for a more unified and polished look. I find the following Firefox add-ons useful:
 - [nightTab](https://addons.mozilla.org/en-US/firefox/addon/nighttab/)
 - [vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff)
 - [uBlock](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
 - [Session Sync](https://addons.mozilla.org/en-US/firefox/addon/session-sync)
 - [HTTPS everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere)
 
-I made the following changes to the Firefox theme file after installing minimal functional fox theme (`~/.mozilla/firefox/<profile>-release/chrome/userChrome.css`):
+The following changes are made to the Firefox theme (`~/.mozilla/firefox/<profile>-release/chrome/userChrome.css`):
 ```diff
 diff --git a/userChrome.css b/userChrome.css
 index b136b4a..b32d487 100644
