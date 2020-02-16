@@ -1,6 +1,6 @@
 #define gtk_theme           Cahuella
 #define icon_theme          Paper
-#define desktop_wallpaper   /usr/share/backgrounds/regolith-structure-7.png
+#define desktop_wallpaper   ~/.dotfiles/welostthesea.jpg
 #define rofi_theme          /etc/regolith/styles/cahuella/rofi.rasi
 
 #define i3wm_window_border_size         1
