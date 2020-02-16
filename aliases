@@ -43,6 +43,12 @@ lns(){ ln -s $(readlink -f $1) $2}
 cd () {
 	builtin cd "$@" && command ls --color=auto -F
 }
+
+# power of usb for removing safely
+usboff(){
+    udisksctl unmount -b /dev/$1 && udisksctl power-off -b /dev/$1
+}
+
 #==============================aliases=============================#
 alias vim='nvim'
 alias nv='nvim'
