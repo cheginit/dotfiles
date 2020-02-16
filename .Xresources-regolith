@@ -5,7 +5,7 @@
 #include ".Xresources.d/typeface"
 
 ! -- Styles - Theme
-#include "/etc/regolith/styles/cahuella/theme"
+#include ".Xresources.d/theme"
 
 ! -- Applications
 ! These files map values defined above into specific app settings.
