@@ -7,10 +7,10 @@ The dotfiles are configured based on [Regolith-linux](https://regolith-linux.org
 The dotfiles can be configured as follows:
 ```bash
 url='https://gist.githubusercontent.com/cheginit/096c86dabfdf42c441e894121f4fcab5/raw/ubuntu_regoligth.sh' && \
-wget -O fresh_install.sh "${url}" && \
-chmod +x fresh_install.sh
+wget -O ubuntu_regoligth.sh "${url}" && \
+chmod +x ubuntu_regoligth.sh
 ```
-Then modify the script as needed and run it (`./fresh_install.sh`).
+The script provides you with some options for customizing the installation. Just run `./ubuntu_regoligth.sh -h` to see the usage.
 
 A list of some of the packages that will be installed with the dotfile installer are provided below:
 - IDE (latex, python, fortran, etc.): [`neovim`](https://github.com/neovim/neovim)
@@ -41,34 +41,6 @@ Also, [minimal functional fox](https://github.com/turing753/minimal-functional-f
 - [Session Sync](https://addons.mozilla.org/en-US/firefox/addon/session-sync)
 - [HTTPS everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere)
 
-The following changes are made to the Firefox theme (`~/.mozilla/firefox/<profile>-release/chrome/userChrome.css`):
-```diff
-diff --git a/userChrome.css b/userChrome.css
-index b136b4a..b32d487 100644
---- a/userChrome.css
-+++ b/userChrome.css
-@@ -2,18 +2,18 @@ html#main-window {
-        --color-bg: #1e1f29;
-        --toolbar-bgcolor: var(--color-bg) !important;
-
--       --gap-between-tabs: 5px;
-+       --gap-between-tabs: 3px;
-        --margin-after-tab-list: 8x;
-        --margin-before-tab-list: 8px;
-        --tab-font: "Cantarell", sans-serif;
-        --tab-font-weight: 700;
-        --tab-height: 32px;
--       --tabs-container-height: 140px;
-+       --tabs-container-height: 100px;
-
-        --urlbar-container-margin: 5px;
-        --urlbar-list-width: 60%;
-        --urlbar-text-font: "mononoki Nerd Font", sans-serif;
--       --urlbar-text-size: 15pt;
-+       --urlbar-text-size: 13pt;
-        --urlbar-text-weight: 700;
-
-```
 After successful execution of the script run the following commands to set `zsh` as the default shell:
 ```bash
 sudo passwd root && \
