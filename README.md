@@ -12,6 +12,13 @@ chmod +x ubuntu_regoligth.sh
 ```
 The script provides you with some options for customizing the installation. Just run `./ubuntu_regoligth.sh -h` to see the usage.
 
+After successful execution of the script run the following commands to set `zsh` as the default shell:
+```bash
+sudo passwd root && \
+chsh -s $(which zsh)
+```
+Then reboot for changes to take effect.
+
 A list of some of the packages that will be installed with the dotfile installer are provided below:
 - IDE (latex, python, fortran, etc.): [`neovim`](https://github.com/neovim/neovim)
 - Photo editor: [GIMP](https://launchpad.net/~otto-kesselgulasch/+archive/ubuntu/gimp)
@@ -39,10 +46,3 @@ Also, [minimal functional fox](https://github.com/turing753/minimal-functional-f
 - [uBlock](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
 - [Session Sync](https://addons.mozilla.org/en-US/firefox/addon/session-sync)
 - [HTTPS everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere)
-
-After successful execution of the script run the following commands to set `zsh` as the default shell:
-```bash
-sudo passwd root && \
-chsh -s $(which zsh)
-```
-Then reboot for changes to take effect.
