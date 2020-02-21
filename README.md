@@ -24,12 +24,11 @@ A list of some of the packages that will be installed with the dotfile installer
 - Music: [Spotify](https://snapcraft.io/spotify)
 - 3D software: [Blender](https://snapcraft.io/blender)
 - Social: [Slack](https://snapcraft.io/slack), [Telegram](https://snapcraft.io/telegram-desktop), [Skype](https://repo.skype.com/latest/)
-- Browser: Firefox, Chrome
+- Browser: Firefox
 - Python: [Miniconda](https://repo.continuum.io/miniconda/)
 - Shell: `zsh` with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) framework
 - Terminal and i3 font: [Cascadia PL](https://github.com/microsoft/cascadia-code)
 - Remote terminal: [tmux](https://github.com/tmux/tmux) with [.tmux](https://github.com/gpakosz/.tmux) config
-- Bootable USB creator: [etcher](https://github.com/balena-io/etcher/releases)
 - Cloud storage: [Dropbox](https://www.dropbox.com/install-linux)
 - Utilities: [`bat`](https://github.com/sharkdp/bat), [`z`](https://github.com/agkozak/zsh-z), [`ack`](https://beyondgrep.com/), [`fzf`](https://github.com/junegunn/fzf.vim) (ctrl+r), [`gotop`](https://github.com/cjbassi/gotop), [`imgp`](https://github.com/jarun/imgp), [`rofi-calc`](https://github.com/svenstaro/rofi-calc) (mod+c), [`thefuck`](https://github.com/nvbn/thefuck), [`td-cli`](https://github.com/darrikonn/td-cli)
 - Wallpaper: from [wallpapers](https://github.com/turing753/wallpapers) repo
