@@ -37,7 +37,7 @@ mkd() { mkdir -p "$@" && cd "$@"; }
 c2c(){ echo $1 | xclip -sel clip }
 
 # soft link a file using readlink
-lns(){ ln -s $(readlink -f $1) $2}
+lns(){ ln -s $(realpath $1) $2}
 
 # cd followed by ls
 cd () {
@@ -49,11 +49,21 @@ usboff(){
     udisksctl unmount -b /dev/$1 && udisksctl power-off -b /dev/$1
 }
 
+# install deb files
+debin(){
+    if [[ -f "$1" ]]; then
+        sudo dpkg -i "$1" && \
+        sudo apt install -f
+    else
+        echo "$1 not found!"
+    fi
+}
+
 #==============================aliases=============================#
 alias vim='nvim'
 alias nv='nvim'
 alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh'
-alias pipup='pip3 install --user -U thefuck flashfocus td-cli jedi pynvim'
+alias pipup='pip3 install --user -U thefuck td-cli jedi pynvim'
 alias lg='lazygit'
 alias rsync='rsync -ahvz --info=progress2'
 alias open="xdg-open"
@@ -61,6 +71,7 @@ alias cdg="cd ${GITHUB_DIR}"
 alias api='sudo apt install'
 alias cat="bat"
 alias tdi="td --interactive"
+alias clip="xclip -sel clip < "
 
 if [[ -f ~/.aliases.local ]];then
     source ~/.aliases.local
