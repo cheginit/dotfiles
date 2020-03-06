@@ -6,3 +6,4 @@ rofi.theme: /etc/regolith/styles/cahuella/rofi.rasi
 gnome.wallpaper: ~/.dotfiles/welostthesea.jpg
 i3-wm.bar.position: top
 i3-wm.i3xrocks.config: ~/.config/regolith/i3xrocks/config
+i3-wm.bar.trayoutput: primary
