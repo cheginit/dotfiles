@@ -58,7 +58,7 @@ usboff(){
 # install deb files
 debin(){
     if [[ -f "$1" ]]; then
-        sudo dpkg -i "$1" && \
+        sudo dpkg -i "$1"
         sudo apt install -f
     else
         echo "$1 not found!"

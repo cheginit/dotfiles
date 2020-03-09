@@ -395,3 +395,6 @@ exec --no-startup-id /usr/bin/unclutter -b
 
 # Calculator
 bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
+
+# Screen shot
+bindsym $mod+Print exec "maim -s | xclip -selection clipboard -t image/png"
