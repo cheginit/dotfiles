@@ -9,7 +9,6 @@ plugins=(
     pip
     python
     sudo
-    zsh-z
     fast-syntax-highlighting
 )
 

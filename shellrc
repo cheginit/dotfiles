@@ -66,7 +66,8 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 command -v thefuck >/dev/null 2>&1 && \
 eval $(thefuck --alias fuck)
 
-[ -f ~/.fzf.$shell ] && source ~/.fzf.$shell
+command -v zoxide >/dev/null 2>&1 && \
+eval "$(zoxide init zsh)"
 
 if [[ -f ~/.shellrc.local ]]; then
     source ~/.shellrc.local
