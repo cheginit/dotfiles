@@ -37,7 +37,7 @@ A list of some of the packages that will be installed with the dotfile installer
 - Terminal and i3 font: [Cascadia PL](https://github.com/microsoft/cascadia-code)
 - Remote terminal: [tmux](https://github.com/tmux/tmux) with [.tmux](https://github.com/gpakosz/.tmux) config
 - Cloud storage: [Dropbox](https://www.dropbox.com/install-linux)
-- Utilities: [`bat`](https://github.com/sharkdp/bat), [`z`](https://github.com/agkozak/zsh-z), [`ack`](https://beyondgrep.com/), [`fzf`](https://github.com/junegunn/fzf.vim) (ctrl+r), [`gotop`](https://github.com/cjbassi/gotop), [`imgp`](https://github.com/jarun/imgp), [`rofi-calc`](https://github.com/svenstaro/rofi-calc) (mod+c), [`thefuck`](https://github.com/nvbn/thefuck), [`td-cli`](https://github.com/darrikonn/td-cli), [`magic-wormhole`](https://magic-wormhole.readthedocs.io/en/latest)
+- Utilities: [`bat`](https://github.com/sharkdp/bat), [`zoxide`](https://github.com/ajeetdsouza/zoxide), [`ack`](https://beyondgrep.com/), [`fzf`](https://github.com/junegunn/fzf.vim) (ctrl+r), [`gotop`](https://github.com/cjbassi/gotop), [`imgp`](https://github.com/jarun/imgp), [`rofi-calc`](https://github.com/svenstaro/rofi-calc) (mod+c), [`thefuck`](https://github.com/nvbn/thefuck), [`td-cli`](https://github.com/darrikonn/td-cli), [`magic-wormhole`](https://magic-wormhole.readthedocs.io/en/latest)
 - Wallpaper: from [wallpapers](https://github.com/turing753/wallpapers) repo
 
 Also, [minimal functional fox](https://github.com/turing753/minimal-functional-fox) theme will be installed for a more unified and polished look. I find the following Firefox add-ons useful:
