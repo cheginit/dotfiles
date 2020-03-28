@@ -7,3 +7,7 @@ gnome.wallpaper: ~/.dotfiles/welostthesea.jpg
 i3-wm.bar.position: top
 i3-wm.i3xrocks.config: ~/.config/regolith/i3xrocks/config
 i3-wm.bar.trayoutput: primary
+i3-wm.bindsym.1: c
+i3-wm.bindsym.program.1: rofi -show calc -modi calc -no-show-match -no-sort
+i3-wm.bindsym.2: Print
+i3-wm.bindsym.program.2: maim -s | xclip -selection clipboard -t image/png
