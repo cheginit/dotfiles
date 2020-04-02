@@ -61,7 +61,7 @@ export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 export EDITOR=nvim
 
 export PATH=${N_PREFIX}/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:$LD_LIBRARY_PATH
 
 command -v thefuck >/dev/null 2>&1 && \
 eval $(thefuck --alias fuck)
