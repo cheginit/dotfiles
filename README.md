@@ -34,8 +34,6 @@ A list of some of the packages that will be installed with the dotfile installer
 - Browser: Firefox
 - Python: [Miniconda](https://repo.continuum.io/miniconda/)
 - Shell: `zsh` with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) framework
-- Terminal and i3 font: [Cascadia PL](https://github.com/microsoft/cascadia-code)
-- Remote terminal: [tmux](https://github.com/tmux/tmux) with [.tmux](https://github.com/gpakosz/.tmux) config
 - Cloud storage: [Dropbox](https://www.dropbox.com/install-linux)
 - Utilities: [`bat`](https://github.com/sharkdp/bat), [`zoxide`](https://github.com/ajeetdsouza/zoxide), [`ack`](https://beyondgrep.com/), [`fzf`](https://github.com/junegunn/fzf.vim) (ctrl+r), [`gotop`](https://github.com/cjbassi/gotop), [`imgp`](https://github.com/jarun/imgp), [`rofi-calc`](https://github.com/svenstaro/rofi-calc) (mod+c), [`thefuck`](https://github.com/nvbn/thefuck), [`td-cli`](https://github.com/darrikonn/td-cli), [`magic-wormhole`](https://magic-wormhole.readthedocs.io/en/latest)
 - Wallpaper: from [wallpapers](https://github.com/turing753/wallpapers) repo
