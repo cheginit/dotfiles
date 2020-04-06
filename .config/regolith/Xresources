@@ -1,8 +1,7 @@
-St.font: Cascadia Mono PL:pixelsize=16:antialias=true:autohint=true
-gnome.wm.theme: Cahuella
-gnome.gtk.theme: Cahuella
-gnome.icon.theme: Paper
-rofi.theme: /etc/regolith/styles/cahuella/rofi.rasi
+gnome.wm.theme: Ayu-Mirage-Dark
+gnome.gtk.theme: Ayu-Mirage-Dark
+gnome.icon.theme: Moka
+rofi.theme: /etc/regolith/styles/ayu-mirage-regolith/rofi.rasi
 gnome.wallpaper: ~/.dotfiles/welostthesea.jpg
 i3-wm.bar.position: top
 i3-wm.bar.trayoutput: primary
@@ -10,3 +9,4 @@ i3-wm.bindsym.1: c
 i3-wm.bindsym.program.1: rofi -show calc -modi calc -no-show-match -no-sort
 i3-wm.bindsym.2: Print
 i3-wm.bindsym.program.2: maim -s | xclip -selection clipboard -t image/png
+i3-wm.client.focused.color.child_border: color_red
