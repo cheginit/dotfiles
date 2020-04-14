@@ -38,7 +38,7 @@ A list of some of the packages that will be installed with the dotfile installer
 - Utilities: [`bat`](https://github.com/sharkdp/bat), [`zoxide`](https://github.com/ajeetdsouza/zoxide), [`ack`](https://beyondgrep.com/), [`fzf`](https://github.com/junegunn/fzf.vim) (ctrl+r), [`gotop`](https://github.com/cjbassi/gotop), [`imgp`](https://github.com/jarun/imgp), [`rofi-calc`](https://github.com/svenstaro/rofi-calc) (mod+c), [`thefuck`](https://github.com/nvbn/thefuck), [`td-cli`](https://github.com/darrikonn/td-cli), [`magic-wormhole`](https://magic-wormhole.readthedocs.io/en/latest)
 - Wallpaper: from [wallpapers](https://github.com/turing753/wallpapers) repo
 
-Also, [minimal functional fox](https://github.com/turing753/minimal-functional-fox) theme will be installed for a more unified and polished look. I find the following Firefox add-ons useful:
+Also, [Firefox-Mod](https://github.com/datguypiko/Firefox-Mod) theme will be installed for a more unified and polished look. I find the following Firefox add-ons useful:
 - [nightTab](https://addons.mozilla.org/en-US/firefox/addon/nighttab/)
 - [vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff)
 - [uBlock](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
