@@ -5,4 +5,6 @@ i3-wm.bar.trayoutput: primary
 i3-wm.bindsym.1: c
 i3-wm.bindsym.program.1: rofi -show calc -modi calc -no-show-match -no-sort
 i3-wm.bindsym.2: Print
-i3-wm.bindsym.program.2: maim -s | xclip -selection clipboard -t image/png
+i3-wm.bindsym.program.2: maim -su | xclip -selection clipboard -t image/png
+i3-wm.bindsym.3: Shift+Print
+i3-wm.bindsym.program.3: maim -su ~/Pictures/$(date +%s).png

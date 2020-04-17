@@ -67,20 +67,15 @@ set_from_resource $ws17 i3-wm.workspace.17.name "17"
 set_from_resource $ws18 i3-wm.workspace.18.name "18"
 set_from_resource $ws19 i3-wm.workspace.19.name "19"
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
-hide_edge_borders smart
+###############################################################################
+# Launcher dialogs
+###############################################################################
 
 ## Launch // Terminal // <> Enter ##
 bindsym $mod+Return exec /usr/bin/x-terminal-emulator
 
 ## Launch // Browser // <><Shift> Enter ##
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
-
-###############################################################################
-# Launcher dialogs
-###############################################################################
 
 set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/cahuella/rofi.rasi
 
@@ -242,6 +237,11 @@ bindsym $mod+$alt+Ctrl+7 move container to workspace number $ws17; workspace num
 bindsym $mod+$alt+Ctrl+8 move container to workspace number $ws18; workspace number $ws18
 bindsym $mod+$alt+Ctrl+9 move container to workspace number $ws19; workspace number $ws19
 
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+hide_edge_borders smart
+
 ###############################################################################
 # Session Management
 ###############################################################################
@@ -303,7 +303,7 @@ set_from_resource $i3-wm.program.bluetooth i3-wm.program.bluetooth gnome-control
 bindsym $mod+b exec $i3-wm.program.bluetooth
 
 ## Launch // File Browser // <><Shift> n ##
-set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus
+set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus --new-window
 bindsym $mod+Shift+n exec $i3-wm.program.files
 
 ## Launch // Notification Viewer // <> n ##
@@ -529,7 +529,9 @@ exec --no-startup-id $i3-wm.program.3
 set_from_resource $i3-wm.bindsym.1 i3-wm.bindsym.1 :
 set_from_resource $i3-wm.bindsym.program.1 i3-wm.bindsym.program.1 :
 bindsym $mod+$i3-wm.bindsym.1 exec --no-startup-id "$i3-wm.bindsym.program.1"
-
 set_from_resource $i3-wm.bindsym.2 i3-wm.bindsym.2 :
 set_from_resource $i3-wm.bindsym.program.2 i3-wm.bindsym.program.2 :
 bindsym $mod+$i3-wm.bindsym.2 exec --no-startup-id "$i3-wm.bindsym.program.2"
+set_from_resource $i3-wm.bindsym.3 i3-wm.bindsym.3 :
+set_from_resource $i3-wm.bindsym.program.3 i3-wm.bindsym.program.3 :
+bindsym $mod+$i3-wm.bindsym.3 exec --no-startup-id "$i3-wm.bindsym.program.3"
