@@ -43,7 +43,9 @@ mkd() { mkdir -p "$@" && cd "$@"; }
 c2c(){ echo $1 | xclip -sel clip }
 
 # soft link a file using readlink
-lns(){ ln -s $(realpath $1) $2}
+lns () {
+        ln -s $(realpath "${1-}") "${2-}"
+}
 
 # cd followed by ls
 cd () {
