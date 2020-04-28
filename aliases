@@ -1,4 +1,4 @@
-source ~/.dotfiles/envs
+source $HOME/.dotfiles/envs
 
 #====================Functions===================#
 gpush(){
@@ -9,18 +9,18 @@ gpush(){
 }
 
 ana(){
-shell="$(basename $SHELL)"
-__conda_setup="$(${APP_DIR}/miniconda/bin/conda shell.$shell hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "${APP_DIR}/miniconda/etc/profile.d/conda.sh" ]; then
-        . "${APP_DIR}/miniconda/etc/profile.d/conda.sh"
+    shell="$(basename $SHELL)"
+    __conda_setup="$(${APP_DIR}/miniconda/bin/conda shell.$shell hook 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
     else
-        export PATH="${APP_DIR}/miniconda/bin:$PATH"
+        if [ -f "${APP_DIR}/miniconda/etc/profile.d/conda.sh" ]; then
+            . "${APP_DIR}/miniconda/etc/profile.d/conda.sh"
+        else
+            export PATH="${APP_DIR}/miniconda/bin:$PATH"
+        fi
     fi
-fi
-unset __conda_setup
+    unset __conda_setup
 }
 
 git_latest(){
@@ -37,18 +37,22 @@ git_latest_version(){
     sed -E 's/.*"([^"]+)".*/\1/'
 }
 
-mkd() { mkdir -p "$@" && cd "$@"; }
+mkd() {
+    mkdir -p "$@" && cd "$@" || exit
+}
 
 # copy the argument to clipboard
-c2c(){ echo $1 | xclip -sel clip }
+c2c () {
+    echo "$1" | xclip -sel clip
+}
 
 # soft link a file using readlink
 lns () {
-        ln -s $(realpath "${1-}") "${2-}"
+        ln -s "$(realpath "${1-}")" "${2-}"
 }
 
 # cd followed by ls
-cd () {
+cd() {
 	builtin cd "$@" && command ls --color=auto -F
 }
 
@@ -72,15 +76,14 @@ alias vim='nvim'
 alias nv='nvim'
 alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh'
 alias pipup='pip3 install --user -U thefuck td-cli magic-wormhole jedi pynvim youtube-dl'
-alias lg='lazygit'
 alias rsync='rsync -ahvz --info=progress2'
 alias open="xdg-open"
 alias cdg="cd ${GITHUB_DIR}"
 alias api='sudo apt install'
 alias cat="bat"
 alias tdi="td --interactive"
-alias clip="xclip -sel clip < "
+alias cb="xclip -sel clip < "
 
 if [[ -f ~/.aliases.local ]];then
-    source ~/.aliases.local
+    source $HOME/.aliases.local
 fi
