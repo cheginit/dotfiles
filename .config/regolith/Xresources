@@ -8,3 +8,5 @@ i3-wm.bindsym.2: Print
 i3-wm.bindsym.program.2: maim -su | xclip -selection clipboard -t image/png
 i3-wm.bindsym.3: Shift+Print
 i3-wm.bindsym.program.3: maim -su ~/Pictures/$(date +%s).png
+
+i3xrocks.value.mediaplayerwidth: 25
