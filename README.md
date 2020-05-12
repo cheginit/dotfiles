@@ -6,7 +6,7 @@ The dotfiles are configured based on [Regolith-linux](https://regolith-linux.org
 
 The dotfiles can be configured as follows:
 ```bash
-url='https://gist.githubusercontent.com/cheginit/096c86dabfdf42c441e894121f4fcab5/raw/ubuntu_regoligth.sh' && \
+url='https://gist.githubusercontent.com/cheginit/a5a3bc9dc76eb0aafd40679769abfbef/raw/ubunut20_regolith.sh' && \
 wget -O ubuntu_regoligth.sh "${url}" && \
 chmod +x ubuntu_regoligth.sh
 ```
@@ -28,8 +28,6 @@ A list of some of the packages that will be installed with the dotfile installer
 - File manager: [`nnn`](https://github.com/jarun/nnn) and [`lf`](https://github.com/gokcehan/lf)
 - Media player: [VLC](https://www.videolan.org/vlc/index.html)
 - Documents: [`zathura`](https://pwmt.org/projects/zathura/) (PDF viewer), [PDFStudioViewer](https://www.qoppa.com/pdfstudioviewer/download/)(PDF forms and edit), [pandoc](https://github.com/jgm/pandoc/releases)(converter), [Zotero](https://www.zotero.org/download/)(PDF and bibliography manager)
-- Music: [Spotify](https://snapcraft.io/spotify)
-- 3D software: [Blender](https://snapcraft.io/blender)
 - Social: [Slack](https://snapcraft.io/slack), [Telegram](https://snapcraft.io/telegram-desktop), [Skype](https://repo.skype.com/latest/)
 - Browser: Firefox
 - Python: [Miniconda](https://repo.continuum.io/miniconda/)
