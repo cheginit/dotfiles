@@ -10,6 +10,7 @@ plugins=(
     python
     sudo
     fast-syntax-highlighting
+    conda-zsh-completion
 )
 
 source $ZSH/oh-my-zsh.sh
