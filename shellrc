@@ -69,6 +69,8 @@ eval $(thefuck --alias fuck)
 command -v zoxide >/dev/null 2>&1 && \
 eval "$(zoxide init zsh)"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 if [[ -f ~/.shellrc.local ]]; then
     source ~/.shellrc.local
 fi
