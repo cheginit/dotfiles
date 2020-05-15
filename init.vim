@@ -35,11 +35,15 @@ Plug 'ncm2/ncm2-jedi'
 " Formater
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-fugitive'
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
+Plug 'ayu-theme/ayu-vim'
 Plug 'jalvesaq/Nvim-R'
 call plug#end()
 
-colorscheme nord
+" colorscheme nord
+set termguicolors     " enable true colors support
+let ayucolor="mirage" " for mirage version of theme
+colorscheme ayu
 
 set bg=light
 set go=a
@@ -381,3 +385,10 @@ function! CreateCenteredFloatingWindow()
     autocmd BufWipeout <buffer> call CleanupBuffer(s:buf)
     tnoremap <buffer> <silent> <Esc> <C-\><C-n><CR>:call DeleteUnlistedBuffers()<CR>
 endfunction
+
+" IndentLine {{
+let g:indentLine_char = ''
+let g:indentLine_first_char = ''
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0
+" }}
