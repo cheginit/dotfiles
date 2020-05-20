@@ -10,3 +10,4 @@ i3-wm.bindsym.3: Shift+Print
 i3-wm.bindsym.program.3: maim -su ~/Pictures/$(date +%s).png
 
 i3xrocks.value.mediaplayerwidth: 25
+i3xrocks.label.todo: 

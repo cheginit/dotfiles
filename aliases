@@ -37,7 +37,7 @@ git_latest_version(){
     sed -E 's/.*"([^"]+)".*/\1/'
 }
 
-mkd() {
+mkd () {
     mkdir -p "$@" && cd "$@" || exit
 }
 
@@ -51,13 +51,9 @@ lns () {
         ln -s "$(realpath "${1-}")" "${2-}"
 }
 
-# cd followed by ls
-cd() {
-	builtin cd "$@" && command ls --color=auto -F
-}
 
 # power of usb for removing safely
-usboff(){
+usboff (){
     udisksctl unmount -b /dev/$1 && udisksctl power-off -b /dev/$1
 }
 
