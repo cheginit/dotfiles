@@ -10,4 +10,7 @@ i3-wm.bindsym.3: Shift+Print
 i3-wm.bindsym.program.3: maim -su ~/Pictures/$(date +%s).png
 
 i3xrocks.value.mediaplayerwidth: 25
-i3xrocks.label.todo: 
+
+i3-wm.font: Cascadia Code PL Medium 13
+i3-wm.bar.font: pango:Cascadia Code PL Medium 13, Material Design Icons 13
+gnome.terminal.font: Cascadia Code PL Medium 13

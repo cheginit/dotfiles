@@ -77,7 +77,7 @@ bindsym $mod+Return exec /usr/bin/x-terminal-emulator
 ## Launch // Browser // <><Shift> Enter ##
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
 
-set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/cahuella/rofi.rasi
+set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/lascaille/rofi.rasi
 
 ## Launch // Application // <> Space ##
 set_from_resource $i3-wm.program.launcher.app i3-wm.program.launcher.app rofi -show drun -theme $rofiTheme
@@ -287,19 +287,19 @@ bindsym $mod+Shift+s exec $i3-wm.program.sleep
 ###############################################################################
 
 ## Modify // Settings // <> c ##
-set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center
+set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center --class=floating_window
 bindsym $mod+g exec $i3-wm.program.settings
 
 ## Modify // Display Settings // <> d ##
-set_from_resource $i3-wm.program.display i3-wm.program.display gnome-control-center display
+set_from_resource $i3-wm.program.display i3-wm.program.display gnome-control-center --class=floating_window display
 bindsym $mod+d exec $i3-wm.program.display
 
 ## Modify // Wifi Settings // <> w ##
-set_from_resource $i3-wm.program.wifi i3-wm.program.wifi gnome-control-center wifi
+set_from_resource $i3-wm.program.wifi i3-wm.program.wifi gnome-control-center --class=floating_window wifi
 bindsym $mod+w exec $i3-wm.program.wifi
 
 ## Modify // Bluetooth Settings // <> b ##
-set_from_resource $i3-wm.program.bluetooth i3-wm.program.bluetooth gnome-control-center bluetooth
+set_from_resource $i3-wm.program.bluetooth i3-wm.program.bluetooth gnome-control-center --class=floating_window bluetooth
 bindsym $mod+b exec $i3-wm.program.bluetooth
 
 ## Launch // File Browser // <><Shift> n ##
@@ -326,8 +326,7 @@ bindsym $mod+i bar mode toggle
 
 # Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
-for_window [class="Gnome-control-center"] floating enable
-for_window [title="tdi"] floating enable
+for_window [class="floating_window"] floating enable
 
 ###############################################################################
 # Window Resize and Gaps
@@ -398,7 +397,7 @@ popup_during_fullscreen $i3-wm.gaps.popup_during_fullscreen
 
 # window focus follows your mouse movements as the mouse crosses window borders
 set_from_resource $i3-wm.gaps.focus_follows_mouse i3-wm.gaps.focus_follows_mouse no
-focus_follows_mouse no
+focus_follows_mouse $i3-wm.gaps.focus_follows_mouse
 
 ###############################################################################
 # i3 Colors and Fonts
