@@ -26,19 +26,23 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
 " syntax check
 Plug 'w0rp/ale'
-" Autocomplete
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-jedi'
 " Formater
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-fugitive'
 Plug 'lervag/vimtex'
 Plug 'ayu-theme/ayu-vim'
-Plug 'jalvesaq/Nvim-R'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'neomake/neomake'
 call plug#end()
+
+let g:deoplete#enable_at_startup = 1
 
 " colorscheme nord
 set termguicolors
@@ -275,30 +279,6 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 nnoremap <Space> i_<Esc>r
 
-" vim-autoformat
-noremap <F3> :Autoformat<CR>
-" NCM2
-augroup NCM2
-  autocmd!
-  " enable ncm2 for all buffers
-  autocmd BufEnter * call ncm2#enable_for_buffer()
-  " :help Ncm2PopupOpen for more information
-  set completeopt=noinsert,menuone,noselect
-  " When the <Enter> key is pressed while the popup menu is visible, it only
-  " hides the menu. Use this mapping to close the menu and also start a new line.
-  inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-  " uncomment this block if you use vimtex for LaTex
-  autocmd Filetype tex call ncm2#register_source({
-            \ 'name': 'vimtex',
-            \ 'priority': 8,
-            \ 'scope': ['tex'],
-            \ 'mark': 'tex',
-            \ 'word_pattern': '\w+',
-            \ 'complete_pattern': g:vimtex#re#ncm2,
-            \ 'on_complete': ['ncm2#on_complete#omni', 'vimtex#complete#omnifunc'],
-            \ })
-augroup END
-
 " vimtex toc
 let g:vimtex_toc_config = {
     \'split_pos'  : ':vert :botright',
@@ -320,8 +300,6 @@ set textwidth=120
 set expandtab
 set autoindent
 set fileformat=unix
-
-let g:python3_host_prog='/usr/bin/python3'
 
 " Floating window (neovim)
 function! s:layout()
