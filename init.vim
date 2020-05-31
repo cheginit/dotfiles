@@ -35,14 +35,14 @@ Plug 'ncm2/ncm2-jedi'
 " Formater
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-fugitive'
-" Plug 'arcticicestudio/nord-vim'
+Plug 'lervag/vimtex'
 Plug 'ayu-theme/ayu-vim'
 Plug 'jalvesaq/Nvim-R'
 call plug#end()
 
 " colorscheme nord
-set termguicolors     " enable true colors support
-let ayucolor="mirage" " for mirage version of theme
+set termguicolors
+let ayucolor="mirage"
 colorscheme ayu
 
 set bg=light
@@ -299,6 +299,12 @@ augroup NCM2
             \ })
 augroup END
 
+" vimtex toc
+let g:vimtex_toc_config = {
+    \'split_pos'  : ':vert :botright',
+    \'split_width': 50,
+    \}
+
 " Ale
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
@@ -310,7 +316,7 @@ let g:ale_linters = {'python': ['flake8'], 'fortran':['fortran-linter']}
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=79
+set textwidth=120
 set expandtab
 set autoindent
 set fileformat=unix
