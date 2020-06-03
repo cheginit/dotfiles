@@ -35,6 +35,7 @@ A list of some of the packages that will be installed with the dotfile installer
 - Cloud storage: [Dropbox](https://www.dropbox.com/install-linux)
 - Utilities: [`bat`](https://github.com/sharkdp/bat), [`zoxide`](https://github.com/ajeetdsouza/zoxide), [`ack`](https://beyondgrep.com/), [`fzf`](https://github.com/junegunn/fzf.vim) (ctrl+r), [`gotop`](https://github.com/cjbassi/gotop), [`imgp`](https://github.com/jarun/imgp), [`rofi-calc`](https://github.com/svenstaro/rofi-calc) (mod+c), [`thefuck`](https://github.com/nvbn/thefuck), [`td-cli`](https://github.com/darrikonn/td-cli), [`magic-wormhole`](https://magic-wormhole.readthedocs.io/en/latest), [`maim`](https://github.com/naelstrof/maim)
 - Wallpaper: from [wallpapers](https://github.com/turing753/wallpapers) repo
+- Config repositories: [`zsh`](https://github.com/cheginit/prezto), [`nvim`](https://github.com/cheginit/nvim-config)
 
 Also, [Firefox-Mod](https://github.com/datguypiko/Firefox-Mod) theme will be installed for a more unified and polished look. I find the following Firefox add-ons useful:
 - [nightTab](https://addons.mozilla.org/en-US/firefox/addon/nighttab/)
