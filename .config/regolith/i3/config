@@ -535,3 +535,6 @@ bindsym $mod+$i3-wm.bindsym.2 exec --no-startup-id "$i3-wm.bindsym.program.2"
 set_from_resource $i3-wm.bindsym.3 i3-wm.bindsym.3 :
 set_from_resource $i3-wm.bindsym.program.3 i3-wm.bindsym.program.3 :
 bindsym $mod+$i3-wm.bindsym.3 exec --no-startup-id "$i3-wm.bindsym.program.3"
+set_from_resource $i3-wm.bindsym.4 i3-wm.bindsym.4 :
+set_from_resource $i3-wm.bindsym.program.4 i3-wm.bindsym.program.4 :
+bindsym $mod+$i3-wm.bindsym.4 exec --no-startup-id "$i3-wm.bindsym.program.4"

@@ -1,8 +1,9 @@
 export GITHUB_DIR="${HOME}/repos/github"
 export APP_DIR="$HOME/.local/apps"
-export N_PREFIX="${APP_DIR}/n"
 export BROWSER="$(which firefox)"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export FZF_DEFAULT_COMMAND="fd --type file --color=always"
+export FZF_DEFAULT_OPTS="--ansi"
 
 if [[ -f ~/.envs.local ]]; then
     source ~/.envs.local
