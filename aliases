@@ -38,23 +38,23 @@ git_latest_version(){
     sed -E 's/.*"([^"]+)".*/\1/'
 }
 
-mkd () {
+mkd() {
     mkdir -p "$@" && cd "$@" || exit
 }
 
 # copy the argument to clipboard
-c2c () {
+c2c() {
     echo "$1" | xclip -sel clip
 }
 
 # soft link a file using readlink
-lns () {
+lns() {
     ln -s "$(realpath "${1-}")" "${2-}"
 }
 
 
 # power of usb for removing safely
-usboff (){
+usboff(){
     udisksctl unmount -b /dev/$1 && udisksctl power-off -b /dev/$1
 }
 
@@ -150,7 +150,7 @@ extract() {
 	done
 }
 
-gin () {
+gins() {
     ginstall -d ~/.local/bin "$1" latest
 }
 
