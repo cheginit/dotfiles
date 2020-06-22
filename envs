@@ -8,3 +8,6 @@ export FZF_DEFAULT_OPTS="--ansi"
 if [[ -f ~/.envs.local ]]; then
     source ~/.envs.local
 fi
+
+export _INKSCAPE_GC=disable
+
