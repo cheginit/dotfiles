@@ -10,6 +10,8 @@ i3-wm.bindsym.3: Shift+Print
 i3-wm.bindsym.program.3: maim -su ~/Pictures/$(date +%s).png
 i3-wm.bindsym.4: Ctrl+Print
 i3-wm.bindsym.program.4: ocr
+i3-wm.bindsym.5: Ctrl+d
+i3-wm.bindsym.program.5: /usr/bin/gnome-terminal --class=floating_window -e 'td --interactive'
 
 i3xrocks.value.mediaplayerwidth: 25
 
