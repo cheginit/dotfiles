@@ -158,7 +158,7 @@ gins() {
 
 alias vim='nvim'
 alias nv='nvim'
-alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh'
+alias apup='sudo apt update && sudo apt upgrade && sudo snap refresh && sudo apt autoremove && sudo apt autoclean'
 alias pup='pip3 install --user -U thefuck jedi pynvim youtube-dl msgpack'
 alias rsync='rsync -ahvz --info=progress2'
 alias open="xdg-open"
