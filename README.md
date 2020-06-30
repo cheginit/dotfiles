@@ -25,15 +25,14 @@ A list of some of the packages that will be installed with the dotfile installer
 - Vector graphics: [Inkscape](https://inkscape.org/) with [TexText](https://github.com/textext/textext)
 - Raw photo editor: [Rawtherapee](https://launchpad.net/~dhor/+archive/ubuntu/myway)
 - EMail: [`neomutt`](https://neomutt.org/) (can be configured using [mutt-wizard](https://github.com/LukeSmithxyz/mutt-wizard))
-- File manager: [`nnn`](https://github.com/jarun/nnn) and [`lf`](https://github.com/gokcehan/lf)
 - Media player: [VLC](https://www.videolan.org/vlc/index.html)
 - Documents: [`zathura`](https://pwmt.org/projects/zathura/) (PDF viewer), [PDFStudioViewer](https://www.qoppa.com/pdfstudioviewer/download/)(PDF forms and edit), [pandoc](https://github.com/jgm/pandoc/releases)(converter), [Zotero](https://www.zotero.org/download/)(PDF and bibliography manager)
 - Social: [Slack](https://snapcraft.io/slack), [Telegram](https://snapcraft.io/telegram-desktop), [Skype](https://repo.skype.com/latest/)
 - Browser: Firefox
 - Python: [Miniconda](https://repo.continuum.io/miniconda/)
-- Shell: `zsh` with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) framework
+- Shell: `zsh` with [prezto](https://github.com/sorin-ionescu/prezto) framework
 - Cloud storage: [Dropbox](https://www.dropbox.com/install-linux)
-- Utilities: [`bat`](https://github.com/sharkdp/bat), [`zoxide`](https://github.com/ajeetdsouza/zoxide), [`ack`](https://beyondgrep.com/), [`fzf`](https://github.com/junegunn/fzf.vim) (ctrl+r), [`gotop`](https://github.com/cjbassi/gotop), [`imgp`](https://github.com/jarun/imgp), [`rofi-calc`](https://github.com/svenstaro/rofi-calc) (mod+c), [`thefuck`](https://github.com/nvbn/thefuck), [`td-cli`](https://github.com/darrikonn/td-cli), [`magic-wormhole`](https://magic-wormhole.readthedocs.io/en/latest), [`maim`](https://github.com/naelstrof/maim)
+- Utilities: [`bat`](https://github.com/sharkdp/bat), [`zoxide`](https://github.com/ajeetdsouza/zoxide), [`ack`](https://beyondgrep.com/), [`fzf`](https://github.com/junegunn/fzf.vim) (ctrl+r), [`bashtop`](https://github.com/aristocratos/bashtop), [`imgp`](https://github.com/jarun/imgp), [`rofi-calc`](https://github.com/svenstaro/rofi-calc) (mod+c), [`thefuck`](https://github.com/nvbn/thefuck), [`td-cli`](https://github.com/darrikonn/td-cli), [`maim`](https://github.com/naelstrof/maim)
 - Wallpaper: from [wallpapers](https://github.com/turing753/wallpapers) repo
 - Config repositories: [`zsh`](https://github.com/cheginit/prezto), [`nvim`](https://github.com/cheginit/nvim-config)
 
