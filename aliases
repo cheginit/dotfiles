@@ -154,6 +154,11 @@ gins() {
     ginstall -d ~/.local/bin "$1" latest
 }
 
+giup() {
+    for app in bat rg exa fd nnn shellcheck; do
+    gins $app
+    done
+}
 #==============================aliases=============================#
 
 alias vim='nvim'
