@@ -68,6 +68,15 @@ debin(){
     fi
 }
 
+# install deb from url
+deburl(){
+    url="$1"
+    fname="$(basename $url)"
+    aria2c -d /tmp -x 8 -o "$fname" $url
+    debin /tmp/$fname
+    rm -f /tmp/$fname
+}
+
 # from https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/extract/extract.plugin.zsh
 extract() {
 	local remove_archive
