@@ -168,6 +168,13 @@ giup() {
     gins $app
     done
 }
+
+mup() {
+    fname=$(git_latest 'microsoft/cascadia-code' 0) && \
+    unzip $fname 'otf/*.otf' && \
+    mv otf/* ~/.local/share/fonts && \
+    rm -rf $fname otf
+}
 #==============================aliases=============================#
 
 alias vim='nvim'
