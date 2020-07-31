@@ -175,6 +175,7 @@ mup() {
     mv otf/* ~/.local/share/fonts && \
     rm -rf $fname otf
 }
+
 #==============================aliases=============================#
 
 alias vim='nvim'
