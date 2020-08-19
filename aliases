@@ -160,7 +160,7 @@ extract() {
 }
 
 gins() {
-    ginstall -d ~/.local/bin "$1" latest
+    ginstall.sh -d ~/.local/bin "$1" latest
 }
 
 giup() {
@@ -172,7 +172,7 @@ giup() {
 mup() {
     fname=$(git_latest 'microsoft/cascadia-code' 0) && \
     unzip $fname 'otf/*.otf' && \
-    mv otf/* ~/.local/share/fonts && \
+    sudo mv otf/* /usr/local/share/fonts && \
     rm -rf $fname otf
 }
 
