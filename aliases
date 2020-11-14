@@ -172,7 +172,7 @@ giup() {
 mup() {
     fname=$(git_latest 'microsoft/cascadia-code' 0) && \
     unzip $fname 'otf/static/*.otf' && \
-    sudo mv otf/* /usr/local/share/fonts && \
+    sudo mv otf/static/* /usr/local/share/fonts && \
     rm -rf $fname otf
 }
 

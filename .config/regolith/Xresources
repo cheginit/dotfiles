@@ -1,7 +1,7 @@
 gnome.wallpaper: ~/.dotfiles/welostthesea.jpg
 i3-wm.bar.position: top
 
-i3-wm.bindsym.1: c
+i3-wm.bindsym.1: Ctrl+c
 i3-wm.bindsym.program.1: rofi -show calc -modi calc -no-show-match -no-sort -calc-command 'echo -n '{result}' | xclip -sel clip'
 i3-wm.bindsym.2: Print
 i3-wm.bindsym.program.2: maim -su | xclip -selection clipboard -t image/png
@@ -15,3 +15,6 @@ i3-wm.bindsym.program.5: /usr/bin/gnome-terminal --class=floating_window -e 'td 
 i3-wm.font: Cascadia Code PL Medium 13
 i3-wm.bar.font: pango:Cascadia Code PL Medium 13, Material Design Icons 13
 gnome.terminal.font: Cascadia Code PL Medium 13
+
+i3-wm.binding.exit_app: q
+i3-wm.binding.kill_app: Shift+q
