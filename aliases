@@ -170,10 +170,14 @@ giup() {
 }
 
 mup() {
-    fname=$(git_latest 'microsoft/cascadia-code' 0) && \
-    unzip $fname 'otf/static/*.otf' && \
-    sudo mv otf/static/* /usr/local/share/fonts && \
-    rm -rf $fname otf
+    version="$(git_latest_version "ryanoasis/nerd-fonts")" && \
+    wget "https://github.com/ryanoasis/nerd-fonts/releases/download/${version}/CascadiaCode.zip" && \
+    fname="CascadiaCode.zip"
+    unzip $fname && \
+    rm *Windows*.ttf && \
+    sudo mv "Caskaydia Cove Nerd Font Complete Mono.ttf" /usr/local/share/fonts/Caskaydia_Cove_Nerd_Font_Complete_Mono.ttf
+    sudo mv "Caskaydia Cove Nerd Font Complete.ttf" /usr/local/share/fonts/Caskaydia_Cove_Nerd_Font_Complete.ttf
+    rm -rf $fname
 }
 
 #==============================aliases=============================#

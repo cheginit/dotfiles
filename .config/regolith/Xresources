@@ -12,9 +12,9 @@ i3-wm.bindsym.program.4: ocr
 i3-wm.bindsym.5: Ctrl+d
 i3-wm.bindsym.program.5: /usr/bin/gnome-terminal --class=floating_window -e 'td --interactive'
 
-i3-wm.font: Cascadia Code PL Medium 13
-i3-wm.bar.font: pango:Cascadia Code PL Medium 13, Material Design Icons 13
-gnome.terminal.font: Cascadia Code PL Medium 13
+i3-wm.font: CaskaydiaCove Nerd Font Mono Medium 13
+i3-wm.bar.font: pango:CaskaydiaCove Nerd Font Mono Medium 13, Material Design Icons 13
+gnome.terminal.font: CaskaydiaCove Nerd Font Mono Medium 13
 
 i3-wm.binding.exit_app: q
 i3-wm.binding.kill_app: Shift+q
