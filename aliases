@@ -185,7 +185,7 @@ mup() {
 alias vim='nvim'
 alias nv='nvim'
 alias apup='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
-alias pup='pip3 install --user -U thefuck jedi pynvim youtube-dl'
+alias pup='pip3 install --user -U thefuck jedi pynvim youtube-dl neovim-remote'
 alias rsync='rsync -ahvz --info=progress2'
 alias open="xdg-open"
 alias cdg="cd ${GITHUB_DIR}"
