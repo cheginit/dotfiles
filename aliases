@@ -183,6 +183,7 @@ mup() {
 #==============================aliases=============================#
 
 alias vim='nvim'
+alias vi='nvim'
 alias nv='nvim'
 alias apup='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
 alias pup='pip3 install --user -U thefuck jedi pynvim youtube-dl neovim-remote'
@@ -197,6 +198,15 @@ alias cb="xclip -sel clip < "
 alias reload='exec zsh -l'
 alias x=extract
 alias ls='exa --group-directories-first --color=auto --color-scale -F'
+alias p10u="git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull"
+
+alias g=git
+git config --global alias.s 'status -sb'
+git config --global alias.a add
+git config --global alias.c 'commit -m'
+git config --global alias.l pull
+git config --global alias.p push
+git config --global alias.d diff
 
 if [[ -f ~/.aliases.local ]];then
     source $HOME/.aliases.local
