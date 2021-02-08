@@ -201,12 +201,14 @@ alias ls='exa --group-directories-first --color=auto --color-scale -F'
 alias p10u="git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull"
 
 alias g=git
+git config --global alias.l pull
+git config --global alias.d diff
 git config --global alias.s 'status -sb'
 git config --global alias.a add
 git config --global alias.c 'commit -m'
-git config --global alias.l pull
 git config --global alias.p push
-git config --global alias.d diff
+git config --global alias.f fetch
+git config --global alias.m merge
 
 if [[ -f ~/.aliases.local ]];then
     source $HOME/.aliases.local
