@@ -9,21 +9,6 @@ gpush(){
     git push
 }
 
-ana(){
-    shell="$(basename $SHELL)"
-    __conda_setup="$(${APP_DIR}/miniconda/bin/conda shell.$shell hook 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-    else
-        if [ -f "${APP_DIR}/miniconda/etc/profile.d/conda.sh" ]; then
-            . "${APP_DIR}/miniconda/etc/profile.d/conda.sh"
-        else
-            export PATH="${APP_DIR}/miniconda/bin:$PATH"
-        fi
-    fi
-    unset __conda_setup
-}
-
 git_latest(){
     repo=$1
     asset=$2
@@ -77,88 +62,6 @@ deburl(){
     rm -f /tmp/$fname
 }
 
-# from https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/extract/extract.plugin.zsh
-extract() {
-	local remove_archive
-	local success
-	local extract_dir
-
-	if (( $# == 0 )); then
-		cat <<-'EOF' >&2
-			Usage: extract [-option] [file ...]
-
-			Options:
-			    -r, --remove    Remove archive after unpacking.
-		EOF
-	fi
-
-	remove_archive=1
-	if [[ "$1" == "-r" ]] || [[ "$1" == "--remove" ]]; then
-		remove_archive=0
-		shift
-	fi
-
-	while (( $# > 0 )); do
-		if [[ ! -f "$1" ]]; then
-			echo "extract: '$1' is not a valid file" >&2
-			shift
-			continue
-		fi
-
-		success=0
-		extract_dir="${1:t:r}"
-		case "${1:l}" in
-			(*.tar.gz|*.tgz) (( $+commands[pigz] )) && { pigz -dc "$1" | tar xv } || tar zxvf "$1" ;;
-			(*.tar.bz2|*.tbz|*.tbz2) tar xvjf "$1" ;;
-			(*.tar.xz|*.txz)
-				tar --xz --help &> /dev/null \
-				&& tar --xz -xvf "$1" \
-				|| xzcat "$1" | tar xvf - ;;
-			(*.tar.zma|*.tlz)
-				tar --lzma --help &> /dev/null \
-				&& tar --lzma -xvf "$1" \
-				|| lzcat "$1" | tar xvf - ;;
-			(*.tar.zst|*.tzst)
-				tar --zstd --help &> /dev/null \
-				&& tar --zstd -xvf "$1" \
-				|| zstdcat "$1" | tar xvf - ;;
-			(*.tar) tar xvf "$1" ;;
-			(*.tar.lz) (( $+commands[lzip] )) && tar xvf "$1" ;;
-			(*.tar.lz4) lz4 -c -d "$1" | tar xvf - ;;
-			(*.tar.lrz) (( $+commands[lrzuntar] )) && lrzuntar "$1" ;;
-			(*.gz) (( $+commands[pigz] )) && pigz -dk "$1" || gunzip -k "$1" ;;
-			(*.bz2) bunzip2 "$1" ;;
-			(*.xz) unxz "$1" ;;
-			(*.lrz) (( $+commands[lrunzip] )) && lrunzip "$1" ;;
-			(*.lz4) lz4 -d "$1" ;;
-			(*.lzma) unlzma "$1" ;;
-			(*.z) uncompress "$1" ;;
-			(*.zip|*.war|*.jar|*.sublime-package|*.ipsw|*.xpi|*.apk|*.aar|*.whl) unzip "$1" -d $extract_dir ;;
-			(*.rar) unrar x -ad "$1" ;;
-			(*.rpm) mkdir "$extract_dir" && cd "$extract_dir" && rpm2cpio "../$1" | cpio --quiet -id && cd .. ;;
-			(*.7z) 7za x "$1" ;;
-			(*.deb)
-				mkdir -p "$extract_dir/control"
-				mkdir -p "$extract_dir/data"
-				cd "$extract_dir"; ar vx "../${1}" > /dev/null
-				cd control; tar xzvf ../control.tar.gz
-				cd ../data; extract ../data.tar.*
-				cd ..; rm *.tar.* debian-binary
-				cd ..
-			;;
-			(*.zst) unzstd "$1" ;;
-			(*)
-				echo "extract: '$1' cannot be extracted" >&2
-				success=1
-			;;
-		esac
-
-		(( success = $success > 0 ? $success : $? ))
-		(( $success == 0 )) && (( $remove_archive == 0 )) && rm "$1"
-		shift
-	done
-}
-
 gins() {
     ginstall.sh -d ~/.local/bin "$1" latest
 }
@@ -183,8 +86,22 @@ mup() {
 cup() {
     fname=$(git_latest 'microsoft/cascadia-code' 0) && \
     unzip $fname 'otf/static/*.otf' && \
-    sudo mv otf/* /usr/local/share/fonts && \
-    rm -rf $fname otf
+    sudo cp -r otf/* /usr/local/share/fonts && \
+    rm -rf $fname otf && \
+    fc-cache -fv
+}
+
+libreup() {
+    version="$(curl -sL https://downloadarchive.documentfoundation.org/libreoffice/old/latest/deb/x86_64 | grep -oP '(?<=href="LibreOffice_)[^"]*(?=_Linux_x86-64_deb.tar.gz")' | head -1 | cut -d '.' -f -3)"
+
+    url="https://download.documentfoundation.org/libreoffice/stable/${version}/deb/x86_64/LibreOffice_${version}_Linux_x86-64_deb.tar.gz"
+
+    wget -q --show-progress --progress=bar:force -O libre.tar.gz $url 2>&1 && \
+        tar xvf libre.tar.gz --wildcards --no-anchored "*.deb" --strip-components 1 && \
+        sudo dpkg -i DEBS/*.deb && \
+        sudo apt -f install
+
+    rm -rf libre.tar.gz DEBS
 }
 
 #==============================aliases=============================#
@@ -206,6 +123,11 @@ alias reload='exec zsh -l'
 alias x=extract
 alias ls='exa --group-directories-first --color=auto --color-scale -F'
 alias p10u="git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias qwget="wget -q --show-progress --progress=bar:force 2>&1"
+alias aria2c="aria2c -c -s 16 -x 16 -k 10M -j 1"
 
 alias g=git
 git config --global alias.l pull
