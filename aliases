@@ -62,16 +62,6 @@ deburl(){
     rm -f /tmp/$fname
 }
 
-gins() {
-    ginstall.sh -d ~/.local/bin "$1" latest
-}
-
-giup() {
-    for app in bat rg exa fd nnn shellcheck; do
-    gins $app
-    done
-}
-
 mup() {
     version="$(git_latest_version "ryanoasis/nerd-fonts")" && \
     wget "https://github.com/ryanoasis/nerd-fonts/releases/download/${version}/CascadiaCode.zip" && \
@@ -128,6 +118,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias qwget="wget -q --show-progress --progress=bar:force 2>&1"
 alias aria2c="aria2c -c -s 16 -x 16 -k 10M -j 1"
+alias la="ll -a"
 
 alias g=git
 git config --global alias.l pull
