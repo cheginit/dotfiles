@@ -1,10 +1,10 @@
 gnome.wallpaper: ~/.dotfiles/welostthesea.jpg
 i3-wm.bar.position: top
 
-i3-wm.font: Caskaydia Cove Nerd Font Medium 13
-i3-wm.bar.font: pango:Caskaydia Cove Nerd Font Medium 13, Material Design Icons 13
-gnome.terminal.font: Caskaydia Cove Nerd Font Medium 13
-i3xrocks.value.font: pango:Caskaydia Cove Nerd Font Medium 13, Material Design Icons 13
+i3-wm.font: MesloLGS NF Medium 13
+i3-wm.bar.font: pango:MesloLGS NF Medium 13, Material Design Icons 13
+gnome.terminal.font: MesloLGS NF Medium 13
+i3xrocks.value.font: pango:MesloLGS NF Medium 13, Material Design Icons 13
 i3xrocks.todo.uncompleted: true
 
 i3-wm.binding.exit_app: q
