@@ -1,7 +1,4 @@
-source $HOME/.dotfiles/envs
-
 #====================Functions===================#
-
 gpush(){
     [ -z "$1" ] && comm="fixed issues" || comm="$1"
     git add . && \
@@ -130,7 +127,5 @@ git config --global alias.p push
 git config --global alias.f fetch
 git config --global alias.m merge
 
-if [[ -f ~/.aliases.local ]];then
-    source $HOME/.aliases.local
-fi
+[[ -f ~/.aliases.local ]] && source $HOME/.aliases.local
 

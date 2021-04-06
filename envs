@@ -1,13 +1,26 @@
+export LESS=-RFX
+export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"; a="${a%_}"
+export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"; a="${a%_}"
+export LESS_TERMCAP_me="$(printf '%b' '[0m')"; a="${a%_}"
+export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"; a="${a%_}"
+export LESS_TERMCAP_se="$(printf '%b' '[0m')"; a="${a%_}"
+export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"; a="${a%_}"
+export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
+
+export EDITOR=nvim
+
+export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:$LD_LIBRARY_PATH
+
 export GITHUB_DIR="${HOME}/repos/github"
 export APP_DIR="$HOME/.local/apps"
 export BROWSER="$(which firefox)"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export FZF_DEFAULT_COMMAND="fd --type file --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
+export _INKSCAPE_GC=disable
 
 if [[ -f ~/.envs.local ]]; then
     source ~/.envs.local
 fi
-
-export _INKSCAPE_GC=disable
 
