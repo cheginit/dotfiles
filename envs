@@ -20,7 +20,5 @@ export FZF_DEFAULT_COMMAND="fd --type file --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
 export _INKSCAPE_GC=disable
 
-if [[ -f ~/.envs.local ]]; then
-    source ~/.envs.local
-fi
+[[ -f ~/.envs.local ]] && source ~/.envs.local
 
