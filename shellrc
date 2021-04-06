@@ -32,3 +32,8 @@ _fzf_compgen_dir() {
 }
 
 chpwd() exa --group-directories-first --color=auto --color-scale -F
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+
