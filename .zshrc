@@ -21,7 +21,7 @@ DISABLE_MAGIC_FUNCTIONS=true
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(sudo fd fzf extract zsh-autosuggestions command-not-found fast-syntax-highlighting)
+plugins=(sudo fd fzf extract zsh-autosuggestions command-not-found fast-syntax-highlighting copybuffer docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -32,3 +32,4 @@ source $HOME/.dotfiles/shellrc
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit
+
