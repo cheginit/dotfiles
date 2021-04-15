@@ -20,5 +20,9 @@ export FZF_DEFAULT_COMMAND="fd --type file --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
 export _INKSCAPE_GC=disable
 
+export NNN_PLUG='z:fzz;o:fzopen;p:preview-tui;j:autojump;d:diffs;v:imgview;t:nmount'
+export NNN_FIFO='/tmp/nnn.fifo'
+export LC_COLLATE="C"
+
 [[ -f ~/.envs.local ]] && source ~/.envs.local
 
