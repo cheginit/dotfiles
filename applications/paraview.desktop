@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Paraview
-Exec=bash -c "$(dirname $(readlink -f %k))/../../bin/paraview %U"
-Icon=$(dirname $(readlink -f %k))/../icons/hicolor/96x96/apps/paraview.png
-Type=Application
-Terminal=false
-Categories=Visualization;
-MimeType=text/plain
