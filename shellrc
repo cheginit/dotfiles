@@ -6,6 +6,8 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
+chpwd() exa --group-directories-first --color=auto --color-scale -F
+
 command -v thefuck >/dev/null 2>&1 && eval $(thefuck --alias fuck)
 command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
 
