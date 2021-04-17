@@ -14,8 +14,11 @@ export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:$LD_LIBRARY_PATH
 
 export GITHUB_DIR="${HOME}/repos/github"
 export APP_DIR="$HOME/.local/apps"
+export BIN_DIR="$HOME/.local/bin"
+
 export BROWSER="$(which firefox)"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 export FZF_DEFAULT_COMMAND="fd --type file --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
 export _INKSCAPE_GC=disable
