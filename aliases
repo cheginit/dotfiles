@@ -70,6 +70,18 @@ libreup() {
     rm -rf libre.tar.gz DEBS
 }
 
+gh_update() {
+    git_latest jgm/pandoc 0
+    git_latest muesli/duf 13
+    git_latest sharkdp/bat 12
+    git_latest marktext/marktext 3
+    git_latest ImageOptim/gifski 1
+
+    for f in $(ls *.deb); do
+        debin ${f} && \
+        rm ${f};
+    done
+}
 #==============================aliases=============================#
 
 alias vim='nvim'
