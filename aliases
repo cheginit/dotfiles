@@ -71,6 +71,7 @@ libreup() {
 }
 
 gh_update() {
+    cd /tmp
     git_latest jgm/pandoc 0
     git_latest muesli/duf 13
     git_latest sharkdp/bat 12
@@ -81,6 +82,13 @@ gh_update() {
         debin ${f} && \
         rm ${f};
     done
+
+    unzip -d exa "$(git_latest ogham/exa 3)" && \
+    mv exa/bin/exa "$BIN_DIR" && \
+    sudo mv exa/man/exa.1 /usr/share/man/man1 && \
+    mv exa/completions/exa.zsh ${ZSH:-$HOME/.oh-my-zsh}/completions && \
+    rm -rf exa*
+    cd -
 }
 #==============================aliases=============================#
 
