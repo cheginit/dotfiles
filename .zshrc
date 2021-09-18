@@ -15,3 +15,4 @@ source "$ZSH/oh-my-zsh.sh"
 source "${HOME}/.dotfiles/envs"
 source "${HOME}/.dotfiles/aliases"
 source "${HOME}/.dotfiles/shellrc"
+
