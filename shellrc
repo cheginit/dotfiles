@@ -10,10 +10,10 @@ chpwd() exa --group-directories-first --color=auto --color-scale -F
 
 command -v thefuck >/dev/null 2>&1 && eval $(thefuck --alias fuck)
 command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
+command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
 
 autoload -U +X bashcompinit && bashcompinit
 
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 [[ -f ~/.shellrc.local ]] && source ~/.shellrc.local
 

@@ -1,5 +1,5 @@
 #====================Functions===================#
-gpush(){
+gpa(){
     git add . && \
     git commit -m "$1" && \
     git push
@@ -33,7 +33,6 @@ lns() {
     ln -s "$(realpath "${1-}")" "${2-}"
 }
 
-
 # power of usb for removing safely
 usboff(){
     udisksctl unmount -b /dev/$1 && udisksctl power-off -b /dev/$1
@@ -47,14 +46,6 @@ debin(){
     else
         echo "$1 not found!"
     fi
-}
-
-cup() {
-    fname=$(git_latest 'microsoft/cascadia-code' 0) && \
-    unzip $fname 'otf/static/*.otf' && \
-    sudo cp -r otf/* /usr/local/share/fonts && \
-    rm -rf $fname otf && \
-    fc-cache -fv
 }
 
 libreup() {
@@ -108,7 +99,6 @@ alias cb="xclip -sel clip < "
 alias reload='exec zsh -l'
 alias x=extract
 alias ls='exa --group-directories-first --color=auto --color-scale -F'
-alias p10u="git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
